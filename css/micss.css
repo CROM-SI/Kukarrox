@@ -1,0 +1,351 @@
+body{
+    background:url(../imagenes/fondo1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:black;
+    width: 99%;
+}
+
+#logo{ display:block; text-indent:-9999px; background:url(../imagenes/logo-kukarrox.png)no-repeat center;
+       background-size: 72%; 
+       width:260px;
+       height:150px; 
+       margin-left: 11%;
+}
+
+
+#footer{
+    color:white;
+    margin-top: 12%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+#content{
+    text-align: left;
+    float:left;
+    width: 40%;
+
+}
+
+#form{
+    color:black;
+    text-align: center;
+    margin-left: 50%;
+    margin-top: 6%;
+    width: 50%;
+    border: 2px black solid;
+    padding-bottom: 2%;
+}
+
+#menuser{
+    margin-left: 82%;
+
+}
+/*estilo barra menu*/
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #999;
+    font-size: 12px;
+    margin-left: 3%;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 green;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    border-radius: 10px 10px 10px 10px;
+
+}
+/*estilo link acceso en barra menu*/
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.campoenrojo{
+    color: red;
+}
+select {
+      width: 200px;
+}
+#categoria{
+    
+}
+
+
+#tabs{
+    margin-top: 3%;
+    padding: 10px 7px 5px 7px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.icons{ float:left; width:500px; padding-right:30px}
+
+
+
+
+
+.phone{ width:300px; float:left; padding-left:70px; margin-left: 110px; margin-top: -137px; font-size: small}
+
+.textofinal{text-align: center; font-size: x-small; margin-top: 40px; margin-left: 5px; }
+
+.info{ float:left; width:150px; margin-bottom: 60px; margin-left: 50px; margin-right: 50px;}
+
+
+
+/*ENCABEZADO HORARIO*/
+#encabezadofooter{ font-size: 18px;}
+
+/*CONTENIDO DEL HORARIO*/
+.letrafooter{font-size: 15px; margin-bottom: 0px;  margin-right: -70px; margin-left: -50px;}
+
+#contacto{ font-size: small; width: 100px; text-align: center; margin-left: 100%}
+
+#encabezadoContacto{ width: 150px; margin-left: 100% ;}
+
+
+
+
+#ContactForm{
+    color: white;
+    padding-top:2px;
+    width:100%; 
+    overflow:hidden;
+}
+
+.wrapper {
+    width:100%; 
+    overflow:hidden; 
+    margin: 10px;  
+}
+
+.mapa{
+    margin-left:16%;
+}
+.textodeinicio {
+    width:60%;
+    color: white;
+    margin-left:30%;
+    text-align:center;
+}
+.textomapa{
+    color: black;
+    font-weight: bolder;
+    margin-left: 22%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}
+.textoregistrarcliente{
+    color: green;
+
+
+}
+
+
+
+
+#lomasvendido{ display:block; text-indent:-9999px; background:url(../imagenes/pisco.jpg)no-repeat center;
+               background-size: 90%; 
+               width:260px;
+               height:150px; 
+               margin-left: 40%;
+}
+#premium{
+
+    display:block; text-indent:-9999px; background:url(../imagenes/Bar-Premium.png)no-repeat center;
+    background-size: 72%; 
+    width:320px;
+    height:150px; 
+    margin-left: 38%;
+}
+#otrosproductos{
+    display:block; text-indent:-9999px; background:url(../imagenes/maraca.jpg)no-repeat center;
+    background-size: 72%; 
+    width:320px;
+    height:150px; 
+    margin-left: 25%;
+
+}
+
+
+
+/*cambiar propiedades del acordion de las sesiones*/
+.ui-accordion .ui-accordion-content{
+    color: black;
+    font-size: 14px;
+
+}
+
+.ui-accordion .ui-accordion-header{    
+    background: black;
+    color: white;
+    font-size: 18px;
+
+}
+
+.ui-accordion .ui-accordion-header-active{
+    background: black;
+}
+.ui-accordion .ui-accordion-header:hover{
+    background: green;
+    font-style: italic;
+}
+
+
+/*estilo de los botones de cliente y personal empresa*/
+#btn_regBod{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#btn_regBod:hover{
+      
+    background: black;
+}
+#btn_sol{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#btn_sol:hover{
+    background: black;
+}
+
+
+#btn_Prod{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+#btn_Prod:hover{
+    background:black; 
+}
+
+#btn_regCli{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#btn_regCli:hover{
+    background: black;
+}
+#btn_verBod{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+#btn_verBod:hover{
+    background: black;
+}
+#btn_VerPro{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+#btn_VerPro:hover{
+    background: black;
+}
+
+#salirAdm{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#salirAdm:hover{
+    background: black;
+}
+
+#salirCliente{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#salirCliente:hover{
+    background: black;
+}
+
+#btn_login{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 45%;
+}
+
+#btn_login2{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 45%;
+}
+
+
+
+
+
+
+
+/*FOTO LOCAL*/
+
+#fotolocal1{
+    display:block; text-indent:-9999px; background:url(../imagenes/fotolocal1.jpg)no-repeat center;
+    background-size: 72%; 
+    width:500px;
+    height:500px; 
+    margin-left: 10%;
+    margin-top: -20%;
+    border-radius: 3%;
+
+}
+/*icono de facebook*/
+#iconoface{
+    display:block; text-indent:-9999px; background:url(../imagenes/icon4.jpg)no-repeat center;
+    width: 10%;
+    height: 20px;
+    margin-left: 44%;
+    margin-top: 5%;
+    background-size: 50%;
+}
+
+/*fondo del contenido que esta bajo el menu*/
+#probando{
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(199,199,199,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7c7c7', GradientType=1 );
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+    width: 97%;
+    margin-left: 3%;
+}
+
+
+
+select {
+     background: white;
+     font-size: 14px;
+     height: 30px;
+   
+     padding-left: 10%;
+     width: 250px;
+     border-radius: 30px 30px 30px 30px;
+  }
