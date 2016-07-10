@@ -300,12 +300,12 @@ select {
 /*FOTO LOCAL*/
 
 #fotolocal1{
-    display:block; text-indent:-9999px; background:url(../imagenes/fotolocal1.jpg)no-repeat center;
-    background-size: 72%; 
-    width:500px;
-    height:500px; 
+    display:block; text-indent:-9999px; background:url(../imagenes/kukaLocal.jpg)no-repeat center;
+    background-size: 100%; 
+    width:450px;
+    height:550px; 
     margin-left: 10%;
-    margin-top: -20%;
+    margin-bottom: 8%;
     border-radius: 3%;
 
 }
