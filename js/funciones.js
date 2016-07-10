@@ -475,8 +475,10 @@ function nombreC() {
     $.post(
             base_url + "Controlador/eliminarproC",
             {
-                id :$("#elimin").val()
+                id :$("#btneliminarC").val()
+                
             });
+            
             }
 
 
