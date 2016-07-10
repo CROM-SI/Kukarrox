@@ -1,12 +1,14 @@
 <div id="form2">
     
-    <h3 class="textoregistrarcliente">Encargados de bodega actuales</h3><br/>
-    <table id="table" align="center" border="2" width="300">
+  
+    
+    <table id="table" align="center" border="2" width="400">
+        <caption>Encargados actuales de Bodega</caption>
         <tr>
-            <td align="center"><h5>Nombre</h5></td>
-            <td align="center"><h5>Apellido</h5></td>
-            <td align="center"><h5>Rut</h5></td>
-            <td align="center"><h5>Accion</h5></td>
+            <th align="center"><h5>Nombre</h5></th>
+            <th align="center"><h5>Apellido</h5></th>
+            <th align="center"><h5>Rut</h5></th>
+            <th align="center"><h5>Accion</h5></th>
         </tr>
         <?php
         foreach ($arrBodegueros->result() as $row){

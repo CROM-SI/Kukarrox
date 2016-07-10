@@ -82,10 +82,10 @@ li a, .dropbtn {
     color: red;
 }
 select {
-      width: 200px;
+    width: 200px;
 }
 #categoria{
-    
+
 }
 
 
@@ -151,7 +151,7 @@ select {
     margin-left: 22%;
     padding-top: 3%;
     padding-bottom: 3%;
-    
+
 }
 .textoregistrarcliente{
     color: green;
@@ -217,7 +217,7 @@ select {
 }
 
 #btn_regBod:hover{
-      
+
     background: black;
 }
 #btn_sol{
@@ -289,11 +289,11 @@ select {
     background: green;
     border-radius: 15px 15px 15px 15px;
     margin-left: 5%;
-    
+
 }
 
 #salirCli{
-      background: green;
+    background: green;
     border-radius: 15px 15px 15px 15px;
     margin-top: 4%;
 }
@@ -303,7 +303,7 @@ select {
 
 
 #btn_camPass{
-       background: green;
+    background: green;
     border-radius: 15px 15px 15px 15px;
 }
 #btn_camPass:hover{
@@ -311,7 +311,7 @@ select {
 }
 
 #btn_verPed{
-   background: green;
+    background: green;
     border-radius: 15px 15px 15px 15px;
 }
 #btn_verPed:hover{
@@ -320,9 +320,9 @@ select {
 
 
 #btn_carrito{
-  background: green;
+    background: green;
     border-radius: 15px 15px 15px 15px;
-    
+
 }
 #btn_carrito:hover{
     background: black;
@@ -382,16 +382,16 @@ select {
 
 
 select {
-     background: white;
-     font-size: 14px;
-     height: 30px;
-   
-     padding-left: 10%;
-     width: 250px;
-     border-radius: 30px 30px 30px 30px;
-  }
-  
-  #form3{
+    background: white;
+    font-size: 14px;
+    height: 30px;
+
+    padding-left: 10%;
+    width: 250px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+#form3{
     color:black;
     text-align: center;
     margin-left: 20%;
@@ -415,4 +415,69 @@ select {
     margin-bottom: 6%;
     width:60%;
     padding-bottom: 2%;
-  }
+}
+
+#editarBod{
+    background: green;
+    border-radius: 15px 15px 15px 15px;  
+}
+#cancelarEdi{
+    border-radius: 15px 15px 15px 15px;  
+}
+
+/*  tablas*/
+
+
+td .btn_editar{
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 10%;
+}
+td .btn_editar:hover{
+    color:black;
+    background: #D0D0D0;
+    
+}
+
+td .btn_eliminar{  
+    background: red;
+    border-radius: 15px 15px 15px 15px;
+}
+td .btn_eliminar:hover{
+    background: red;
+}
+
+table {     
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px; 
+     margin-top: 8%;
+    width: 480px; 
+    text-align: center;  
+    border-collapse: collapse;
+    margin-left: 50%;
+}
+
+th {     
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039; }
+
+td {    
+    padding: 8px;
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+}
+
+tr:hover td { 
+    background: #d0dafd;
+    color: #339; }
+
+caption{
+    font-size: 20px;
+    color: green;
+}

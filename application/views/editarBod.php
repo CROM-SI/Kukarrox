@@ -15,7 +15,7 @@
     <h10 class="campoenrojo">*</h10>Nickname: <input type="text" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" name="nicknameBodE" value="<?=$nickname?>" class="input" required="true" />
  
     <br/>
-    <button id="editarBod" class="btn btn-succes">Editar</button>
+    <button id="editarBod" class="btn">Editar</button>
     
     <a href="<?=base_url()?>Controlador/volver" id="cancelarEdi" class="btn btn-succes" style="background-color: red; color: black">Cancelar</a>
     
