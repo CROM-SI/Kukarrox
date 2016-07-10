@@ -32,7 +32,7 @@
            
             <li><a href="<?= base_url() ?>Controlador/cargarQuienesSomos">Quienes Somos</a></li>
 
-            <li>  <a href="<?= base_url() ?>Controlador/cargarHistoria">Historia</a> </li>
+            <li>  <a href="<?= base_url() ?>Controlador/cargarHistoria">Cobertura</a> </li>
             
            <li id="soli">  <a href="<?= base_url() ?>Controlador/cargarSolicitud">Solicitud</a> </li>
             <div  id="menuser">
