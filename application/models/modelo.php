@@ -17,6 +17,18 @@ class Modelo extends CI_Model{
         }
     }
     
+    function idusuario($dato){
+        $this->db->select("id_cliente");
+        $this->db->where('nickname',$dato);
+        
+        $this->db->from("cliente");
+         $data = $this->db->get();
+        return $data;
+        
+    }
+    
+    
+    
     function validarLogin2($nick, $clave){
         
         $this->db->select("*");

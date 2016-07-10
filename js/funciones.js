@@ -423,11 +423,16 @@ function cargarCarrito() {
             base_url + "Controlador/cargarCarrito",
             {
                  nombreC :$("#nombreCc").val()
+                 
             },
             function (pagina) {
                 $("#menuCliente").hide();
                 $("#menuCliente").html(pagina);
                 $("#menuCliente").show('fast');
+                $("#btn_carrito").button(function (){
+                    
+                    
+                });
                 $("#salirCliente").button();
                 
                 

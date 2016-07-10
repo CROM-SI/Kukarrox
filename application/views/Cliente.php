@@ -3,7 +3,8 @@
     <input type="id" id="nombreCc"  hidden="true" value="<?=$usuario?>"/>
     <br>
     <br>
-    <a href="<?=base_url()?>Controlador/cargarCarrito" onclick="cargarCarrito()" id="btn_carrito">Carrito</a>
+    
+    <a href="<?=base_url()?>Controlador/cargarCarrito" onclick="cargarCarrito()"  id="btn_carrito">Carrito</a>
     <br/><br/>
     <a href="#<?=base_url()?>Controlador/cargarlistacarrito" onclick=" cargaralmacen()" id="btn_verPed"  >Ver mis pedido</a>
     <br/><br/>
