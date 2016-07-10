@@ -1,7 +1,7 @@
 <div id="carrito">
     <div class="row">
-        
-        <h2 style="text-align: center">Elije tus productos</h2><br/>
+       
+        <h2 style="text-align: center">Elije tus productos : <?php $usuario ?></h2><br/>
         
         <div class="producto" >
             <center >
@@ -30,7 +30,8 @@
                  </select> 
                 
                  <br><br>
-                 <button id="agregarC" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-succes' value="<?php $usuario ?>">Agregar a carrito</button> 
+<!--                 <input type="text" id="agregarCl"  hidden="true" />-->
+                 <button id="agregarC"  style="margin-left: 5%;margin-bottom:5%;" class='btn btn-succes' >Agregar a carrito</button> 
                  </div>
                
             <?php endforeach; ?>

@@ -71,6 +71,7 @@ function cargarContent() {
                 $("#btn_verPedBod").button();
                 $("#btn_camPassBod").button();
                 $("#salirBod").button();
+                
 
             }
     );
@@ -352,7 +353,7 @@ function cargarVerBod() {
 
 
             }
-    )
+    );
 }
 
 function cargarVerPro() {
@@ -378,7 +379,7 @@ function cargarVerPro() {
 
 
             }
-    )
+    );
 }
 
 function cargarSolicitud() {
@@ -404,7 +405,7 @@ function cargarSolicitud() {
 
 
             }
-    )
+    );
 }
 
 function cargarEditar() {
@@ -432,20 +433,14 @@ function cargarCarrito() {
     $.post(
             base_url + "Controlador/cargarCarrito",
             {
+                 nombreC :$("#nombreCc").val()
             },
             function (pagina) {
                 $("#menuCliente").hide();
                 $("#menuCliente").html(pagina);
                 $("#menuCliente").show('fast');
-                $("#btn_car").click(
-                        function () {
-                            
-
-                        }
-
-                );
                 $("#salirCliente").button();
-                 
+                
                 
             }
     );
@@ -466,32 +461,24 @@ function cargaralmacen() {
 //                $("#paginaLogin2").show('fast');
                 
                 $("#salirCliente").button();
-                 
-                
+                 $("#btneliminarC").click(function(){
+                     
+                     nombreC();
+                     
+                 });
+               
             }
     );
 }
-
-function cargarCamPassBod() {
+function nombreC() {
 
     $.post(
-            base_url + "Controlador/cambiarPassBod",
+            base_url + "Controlador/eliminarproC",
             {
-            },
-            function (pagina) {
-                $("#menuBod").hide();
-                $("#menuBod").html(pagina);
-                $("#menuBod").show('fast');
-                $("#btn_camPassBod").click(
-                        function () {
-
-                        }
-
-                );
-
+                id :$("#elimin").val()
+            });
             }
-    )
-}
+
 
 function cargarCamPassBod() {
 
@@ -519,9 +506,9 @@ function enviardatosCa(){
             base_url + "Controlador/almacencarrito",
             {
                 nombreC : $("#nombreC").val(),
-                precioC:$("#precioC").val(),
-                cantidadC :$("#cantidad").val(),
-                nombreCl :$("#agregarC").val()
+                precioC :$("#precioC").val(),
+               cantidadC:$("#cantidad").val(),
+                nombreCl:$("#agregarC").val()
                
             });
     

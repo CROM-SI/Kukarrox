@@ -273,6 +273,11 @@ class Controlador extends CI_Controller {
         $this->load->view("intranet");
         $this->load->view("footer");
     }
+    function eliminarproC() {
+        $id = $this->input->post("id");
+        $this->modelo->eliminarproductoC($id);
+        
+    }
 
     function eliminarPro() {
         $id = $this->uri->segment(3);
@@ -418,6 +423,7 @@ class Controlador extends CI_Controller {
     }
     
     function cargarCarrito() {
+        
         $data['producto'] = $this->modelo->consultaproducto()->result();
         $this->load->view("header");
         $this->load->view("almacen",$data);
@@ -463,7 +469,7 @@ class Controlador extends CI_Controller {
               
            );
           
-          $this->db->insert('carrito', $data);
+         $this->modelo->regcarrito($data);
           
      }
     }

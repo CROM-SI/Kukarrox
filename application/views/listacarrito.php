@@ -13,7 +13,8 @@
                 <td> <?=$i->nombre_producto?> </td>
                 <td> <?=$i->precio_por_unidad?></td>
                 <td> <?=$i->cantidad?></td>
-                 <td><a class='btn_eliminar' href="<?=base_url()?>Controlador/eliminarBod">x</a></td>
+                <input type="text" id="elimin"  hidden="true" value="<?=$i->id_carrito?>"/>
+                <td><a   class='btn_eliminar'  href="<?=base_url()?>Controlador/eliminarproC"  onclick="cargaralmacen()"  id="btneliminarC" ><?=$i->id_carrito?></a></td>
                 </tr>
             
             <?php }?>
