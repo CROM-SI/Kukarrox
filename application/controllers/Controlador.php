@@ -277,6 +277,9 @@ class Controlador extends CI_Controller {
         $id = $this->input->post("id");
         $this->modelo->eliminarproductoC($id);
         
+        $this->load->view("header");
+        $this->load->view("pedido");
+        $this->load->view("footer");
     }
 
     function eliminarPro() {
@@ -423,7 +426,7 @@ class Controlador extends CI_Controller {
     }
     
     function cargarCarrito() {
-        
+        $nombre = $this->input->post("nombreC");
         $data['producto'] = $this->modelo->consultaproducto()->result();
         $this->load->view("header");
         $this->load->view("almacen",$data);
@@ -460,7 +463,8 @@ class Controlador extends CI_Controller {
          $x  = $this->input->post("cantidadC");
          $nombre =$this->input->post("nombreCl");
          
-         $data = 
+         if($x > 0){
+            $data = 
          array(
            'nombre_producto' => $nomb,
            'precio_por_unidad' => $pre,
@@ -469,8 +473,23 @@ class Controlador extends CI_Controller {
               
            );
           
-         $this->modelo->regcarrito($data);
-          
+         $this->modelo->regcarrito($data); 
+         $data['producto'] = $this->modelo->consultaproducto()->result();
+          $this->load->view("header");
+          $this->load->view("almacen",$data);
+          $this->load->view("footer");
+         }else{
+             $data['producto'] = $this->modelo->consultaproducto()->result();
+          $this->load->view("header");
+          $this->load->view("almacen",$data);
+          $this->load->view("footer"); 
+             
+         }
+         
+         
+         
+        
+         
      }
     }
     

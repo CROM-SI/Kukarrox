@@ -55,10 +55,10 @@ class Modelo extends CI_Model{
        
         $this->db->select('id_carrito,nombre_producto,precio_por_unidad,cantidad,nombre_us'); 
          $this->db->where("nombre_us",$nombreU);
-        $this->db->from('carrito');
-        $res = $this->db->get();
-        return $res;
-         
+        $res = $this->db->get('carrito');
+        
+            return $res;
+        
     }
     
     function mostrarBodegueros(){
@@ -127,7 +127,8 @@ class Modelo extends CI_Model{
             return false;
         }
     }
-    
+   
+            
     function editarBodeguero($id,$data){
         $this->db->where('id_usuario',$id);
         $this->db->update('usuario',$data);

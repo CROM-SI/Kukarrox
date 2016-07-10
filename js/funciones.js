@@ -88,21 +88,10 @@ function cargarContent2() {
 
                 });
                 $("#btn_carrito").button();
-                $("#btn_verPed").button().click(function(){
-                    
-                    cargaralmacen();
-                
-                });
+                $("#btn_verPed").button();
                 $("#btn_camPass").button();
                 $("#salirCli").button();
-                $("#agregarC").button().click(
-                        function () {
-                            
-                           enviardatosCa();
-
-                        }
-
-                );
+                
             }
     );
 }
@@ -461,25 +450,12 @@ function cargaralmacen() {
 //                $("#paginaLogin2").show('fast');
                 
                 $("#salirCliente").button();
-                 $("#btneliminarC").click(function(){
-                     
-                     nombreC();
-                     
-                 });
+                 
                
             }
     );
 }
-function nombreC() {
 
-    $.post(
-            base_url + "Controlador/eliminarproC",
-            {
-                id :$("#btneliminarC").val()
-                
-            });
-            
-            }
 
 
 function cargarPedidos() {
@@ -503,20 +479,7 @@ function cargarPedidos() {
     );
 }
 
-function enviardatosCa(){
-    $.post(
-            base_url + "Controlador/almacencarrito",
-            {
-                nombreC : $("#nombreC").val(),
-                precioC :$("#precioC").val(),
-               cantidadC:$("#cantidad").val(),
-                nombreCl:$("#agregarC").val()
-               
-            });
-    
-    
-    
-}
+
 
 
 
