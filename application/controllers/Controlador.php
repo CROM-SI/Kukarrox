@@ -423,6 +423,14 @@ class Controlador extends CI_Controller {
         $this->load->view("almacen",$data);
         $this->load->view("footer");
     }
+    function cargarlistacarrito() {
+        $nombre = $this->input->post("nombreC");
+        $data['carrito'] = $this->modelo->mostrarcarrito($nombre)->result();
+        
+        $this->load->view("listacarrito",$data);
+        
+    }
+    
     
     function volver2() {
         $this->load->view("header");
@@ -430,4 +438,27 @@ class Controlador extends CI_Controller {
         $this->load->view("footer");
     }
 
+    function almacencarrito(){
+     
+//     $datos = $this->modelo->consultaproducto()->result();
+     if ($this->session->userdata('login2') == true) {
+         $nomb = $this->input->post("nombreC");
+         $pre = $this->input->post("precioC");
+         $x  = $this->input->post("cantidadC");
+         $nombre =$this->input->post("nombreCl");
+         
+         $data = 
+         array(
+           'nombre_producto' => $nomb,
+           'precio_por_unidad' => $pre,
+           'cantidad' => $x,
+           'nombre_us'=>$nombre
+              
+           );
+          
+          $this->db->insert('carrito', $data);
+          
+     }
+    }
+    
 }

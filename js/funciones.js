@@ -84,10 +84,21 @@ function cargarContent2() {
 
                 });
                 $("#btn_carrito").button();
-                $("#btn_verPed").button();
+                $("#btn_verPed").button().click(function(){
+                    
+                    cargaralmacen();
+                
+                });
                 $("#btn_camPass").button();
                 $("#salirCli").button();
-                 
+                $("#agregarC").button().click(
+                        function () {
+                            
+                           enviardatosCa();
+
+                        }
+
+                );
             }
     );
 }
@@ -431,8 +442,46 @@ function cargarCarrito() {
 
                 );
                 $("#salirCliente").button();
+                 
+                
             }
     );
+}
+
+function cargaralmacen() {
+
+    $.post(
+            base_url + "Controlador/cargarlistacarrito",
+            {
+                nombreC :$("#nombreCc").val()
+            },
+            function (pagina) {
+                $("#menuCliente").hide();
+                $("#menuCliente").html(pagina);
+                $("#menuCliente").show('fast');
+//                $("#paginaLogin2").html(pagina);
+//                $("#paginaLogin2").show('fast');
+                
+                $("#salirCliente").button();
+                 
+                
+            }
+    );
+}
+
+function enviardatosCa(){
+    $.post(
+            base_url + "Controlador/almacencarrito",
+            {
+                nombreC : $("#nombreC").val(),
+                precioC:$("#precioC").val(),
+                cantidadC :$("#cantidad").val(),
+                nombreCl :$("#agregarC").val()
+               
+            });
+    
+    
+    
 }
 
 

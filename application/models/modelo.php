@@ -50,6 +50,17 @@ class Modelo extends CI_Model{
         return $data;
     }
     
+//    mostrar carrito
+     function  mostrarcarrito($nombreU){
+       
+        $this->db->select('nombre_producto,precio_por_unidad,cantidad,nombre_us'); 
+         $this->db->where("nombre_us",$nombreU);
+        $this->db->from('carrito');
+        $res = $this->db->get();
+        return $res;
+         
+    }
+    
     function mostrarBodegueros(){
        $this->db->select("*");
        $this->db->where("id_rol",3);

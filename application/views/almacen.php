@@ -11,28 +11,26 @@
                    
                    
                     
-                    <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
-
+                     <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
+                     <input type="text" id="nombreC"  hidden="true" value="<?= $i->nombre_producto ?>"/>
              
-                <p>Precio : <?= $i->precio_por_unidad  ?></p> 
+                     <p>Precio : <?= $i->precio_por_unidad  ?></p> 
+                     <input type="text" id="precioC"  hidden="true" value="<?= $i->precio_por_unidad ?>"/>
                 
-                <br><br>
+                     <br><br>
                 
-                 Cantidad:  <select id="cantidad" > 
-                 <option disabled selected value="0">Seleccione</option> 
+                     Cantidad:  <select id="cantidad" > 
+                     <option disabled selected value="0">Seleccione</option> 
                  
-                 <?php for($x=0; $x<=$i->stok_producto;$x++){?> 
+                     <?php for($x=0; $x<=$i->stok_producto;$x++){?> 
                  
                      <option value="<?= $x; ?>"><?= $x; ?></option> 
                      
-                 <?php }?>
-                 
-<!--                 <option value="<?= $i->id_producto; ?>"><?= $i->stok_producto; ?></option> -->
-                
+                     <?php }?>
                  </select> 
                 
                  <br><br>
-                 <button id="agregarC" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-succes' value="<?=$i->id_producto?>">Agregar a carrito</button> 
+                 <button id="agregarC" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-succes' value="<?php $usuario ?>">Agregar a carrito</button> 
                  </div>
                
             <?php endforeach; ?>
