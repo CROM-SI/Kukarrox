@@ -31,7 +31,7 @@
                                            border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Teléfono: <input type="tel" name="telefonoCli" required="true"maxlength="9"
+        </h10>Teléfono: <input type="text" name="telefonoCli" required="true"maxlength="9"
                          style="
                                color:black;
                                margin-left: 9%;
