@@ -276,7 +276,7 @@ class Controlador extends CI_Controller {
     function eliminarproC() {
         $id = $this->input->post("id");
         $this->modelo->eliminarproductoC($id);
-        
+                
     }
 
     function eliminarPro() {
