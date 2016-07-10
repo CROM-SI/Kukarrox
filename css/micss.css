@@ -307,8 +307,16 @@ select {
     margin-left: 10%;
     margin-bottom: 8%;
     border-radius: 3%;
-
 }
+#fotoRegion{
+    display:block; text-indent:-9999px; background:url(../imagenes/mapaKuka.png)no-repeat center;
+    background-size: 100%; 
+    width:580px;
+    height:680px; 
+    margin-bottom: 8%;
+    border-radius:10%;
+}
+
 /*icono de facebook*/
 #iconoface{
     display:block; text-indent:-9999px; background:url(../imagenes/icon4.jpg)no-repeat center;

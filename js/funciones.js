@@ -71,7 +71,7 @@ function cargarContent() {
                 $("#btn_verPedBod").button();
                 $("#btn_camPassBod").button();
                 $("#salirBod").button();
-                
+                $("#btn_pedido").button();
 
             }
     );
@@ -164,7 +164,7 @@ function cargarRegistroCli() {
 
                 );
             }
-    )
+    );
 }
 
 function cargarIngresaPro() {
@@ -480,17 +480,17 @@ function nombreC() {
             }
 
 
-function cargarCamPassBod() {
+function cargarPedidos() {
 
     $.post(
-            base_url + "Controlador/cambiarPassBod",
+            base_url + "Controlador/cargarPedidos",
             {
             },
             function (pagina) {
                 $("#menuBod").hide();
                 $("#menuBod").html(pagina);
                 $("#menuBod").show('fast');
-                $("#btn_camPassBod").click(
+                $("#btn_pedido").click(
                         function () {
 
                         }

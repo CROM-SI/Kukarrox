@@ -3,7 +3,7 @@
 
     <br>
     <br>
-    <a href="#" id="btn_verPedBod">Ver pedidos</a>
+    <a href="#" id="btn_pedido" onclick="cargarPedidos()">Ver pedidos</a>
     
     <br/><br/>
     <a href="#" id="btn_camPassBod" onclick="cargarCamPassBod()">Cambiar contraseña</a>
