@@ -288,12 +288,45 @@ select {
 #btn_login2{
     background: green;
     border-radius: 15px 15px 15px 15px;
-    margin-left: 45%;
+    margin-left: 5%;
+    
+}
+
+#salirCli{
+      background: green;
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 4%;
+}
+#salirCli:hover{
+    background: black;
 }
 
 
+#btn_camPass{
+       background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+#btn_camPass:hover{
+    background: black;
+}
+
+#btn_verPed{
+   background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+#btn_verPed:hover{
+    background: black;
+}
 
 
+#btn_carrito{
+  background: green;
+    border-radius: 15px 15px 15px 15px;
+    
+}
+#btn_carrito:hover{
+    background: black;
+}
 
 
 
