@@ -380,5 +380,54 @@ class Controlador extends CI_Controller {
             $s = ($s + $r % 10 * (9 - $m++ % 6)) % 11;
         return chr($s ? $s + 47 : 75);
     }
+    
+    function cargarSolicitud() {
+        $this->load->view("header");
+        $this->load->view("enviarSolicitud");
+        $this->load->view("footer");
+    }
+    
+    function enviarSolicitud() {
+        $nombre = $this->input->post("nombreCliSo");
+        $apellido = $this->input->post("apellidoCliSo");
+        $rut = $this->input->post("rutCliSo");
+        $telefono = $this->input->post("telefonoCliSo");
+        $ciudad = $this->input->post("cuidadCliSo");
+        $correo = $this->input->post("correoCliSo");
+        $rol = $this->input->post("rolCliSo");
+        $direccion = $this->input->post("direccionCliSo");
+        
+
+
+        $data = array('nombre_cliente' => $nombre,
+            'apellido_cliente' => $apellido,
+            'direccion_local' => $direccion,
+            'telefono' => $telefono,
+            'ciudad' => $ciudad,
+            'rut_cliente' => $rut,
+            'rol_local' => $rol,
+            'correo' => $correo
+        );
+        
+        $this->db->insert("solicitud",$data);
+        
+        $this->load->view("header");
+        $this->load->view("enviarSolicitud");
+        $this->load->view("footer");
+        
+    }
+    
+    function cargarCarrito() {
+        $data['producto'] = $this->modelo->consultaproducto()->result();
+        $this->load->view("header");
+        $this->load->view("almacen",$data);
+        $this->load->view("footer");
+    }
+    
+    function volver2() {
+        $this->load->view("header");
+        $this->load->view("pedido");
+        $this->load->view("footer");
+    }
 
 }

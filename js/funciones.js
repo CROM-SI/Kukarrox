@@ -83,6 +83,11 @@ function cargarContent2() {
 
 
                 });
+                $("#btn_carrito").button();
+                $("#btn_verPed").button();
+                $("#btn_camPass").button();
+                $("#salirCli").button();
+                 
             }
     );
 }
@@ -406,6 +411,28 @@ function cargarEditar() {
                 );
             }
     )
+}
+
+function cargarCarrito() {
+
+    $.post(
+            base_url + "Controlador/cargarCarrito",
+            {
+            },
+            function (pagina) {
+                $("#menuCliente").hide();
+                $("#menuCliente").html(pagina);
+                $("#menuCliente").show('fast');
+                $("#btn_car").click(
+                        function () {
+                            
+
+                        }
+
+                );
+                $("#salirCliente").button();
+            }
+    );
 }
 
 

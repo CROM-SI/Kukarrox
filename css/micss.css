@@ -349,3 +349,29 @@ select {
      width: 250px;
      border-radius: 30px 30px 30px 30px;
   }
+  
+  #form3{
+    color:black;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 6%;
+    margin-right:20%;
+    margin-bottom: 6%;
+    border: 2px black solid;
+    padding-bottom: 2%;
+}
+
+#soli{
+    margin-left:15%;
+}
+
+.producto{
+    color:black;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 6%;
+    margin-right:20%;
+    margin-bottom: 6%;
+    width:60%;
+    padding-bottom: 2%;
+  }
