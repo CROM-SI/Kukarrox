@@ -68,6 +68,9 @@ function cargarContent() {
                 $("#btn_verBod").button();
                 $("#btn_VerPro").button();
                 $("#btn_sol").button();
+                $("#btn_verPedBod").button();
+                $("#btn_camPassBod").button();
+                $("#salirBod").button();
 
             }
     );
@@ -435,5 +438,25 @@ function cargarCarrito() {
     );
 }
 
+function cargarCamPassBod() {
+
+    $.post(
+            base_url + "Controlador/cambiarPassBod",
+            {
+            },
+            function (pagina) {
+                $("#menuBod").hide();
+                $("#menuBod").html(pagina);
+                $("#menuBod").show('fast');
+                $("#btn_camPassBod").click(
+                        function () {
+
+                        }
+
+                );
+
+            }
+    )
+}
 
 

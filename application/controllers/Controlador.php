@@ -429,5 +429,12 @@ class Controlador extends CI_Controller {
         $this->load->view("pedido");
         $this->load->view("footer");
     }
+    
+    function cambiarPassBod(){
+        
+        $this->load->view("passBod");
+    }
+    
+    
 
 }
