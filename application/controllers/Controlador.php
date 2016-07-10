@@ -276,10 +276,13 @@ class Controlador extends CI_Controller {
     function eliminarproC() {
         $id = $this->input->post("id");
         $this->modelo->eliminarproductoC($id);
+        $nombre = $this->input->post("nombreC");
+        $data['carrito'] = $this->modelo->mostrarcarrito($nombre)->result();
         
         $this->load->view("header");
-        $this->load->view("pedido");
+        $this->load->view("listadocarrito",$data);
         $this->load->view("footer");
+
     }
 
     function eliminarPro() {
