@@ -472,6 +472,26 @@ function cargaralmacen() {
     );
 }
 
+function cargarCamPassBod() {
+
+    $.post(
+            base_url + "Controlador/cambiarPassBod",
+            {
+            },
+            function (pagina) {
+                $("#menuBod").hide();
+                $("#menuBod").html(pagina);
+                $("#menuBod").show('fast');
+                $("#btn_camPassBod").click(
+                        function () {
+
+                        }
+
+                );
+
+            }
+    )
+}
 
 function cargarCamPassBod() {
 

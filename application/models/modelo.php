@@ -112,6 +112,17 @@ class Modelo extends CI_Model{
         }
     }
     
+    function obtenerNombre($id){
+        $this->db->where('id_usuario',$id);
+        $this->db->where('id_rol',3);
+        $res = $this->db->get('usuario');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
     function editarBodeguero($id,$data){
         $this->db->where('id_usuario',$id);
         $this->db->update('usuario',$data);
@@ -138,6 +149,13 @@ class Modelo extends CI_Model{
     
      function regProducto($data) {
         $this->db->insert('producto', $data);
+    }
+    
+    function consultaId(){
+       $this->db->select('nombre_producto,precio_por_unidad,id_producto,stok_producto');
+       $this->db->from("producto");
+         $data = $this->db->get();
+        return $data;
     }
     
     
