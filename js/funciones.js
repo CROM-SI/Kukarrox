@@ -413,7 +413,7 @@ function cargarEditar() {
 
                 );
             }
-    )
+    );
 }
 
 function cargarCarrito() {

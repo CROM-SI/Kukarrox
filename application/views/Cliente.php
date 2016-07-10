@@ -10,7 +10,7 @@
     <a href="#" id="btn_camPass" onclick="">Cambiar contraseña</a>
     <br/><br/>
     
-    <a id="salirCli"  href="<?=base_url()?>Controlador/salir">Salir</a>
+    <a id="salirCli"  href="<?=base_url()?>Controlador/salir2">Salir</a>
 </div>
 
 <div id="menuCliente"></div>
