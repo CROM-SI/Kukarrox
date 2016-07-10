@@ -468,4 +468,9 @@ class Controlador extends CI_Controller {
      }
     }
     
+    function cargarPedidos(){
+        $datos['arrPedidos'] = $this->modelo->mostrarPedido();
+        $this->load->view("verPedidos",$datos);
+    }
+    
 }

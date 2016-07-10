@@ -151,11 +151,18 @@ class Modelo extends CI_Model{
         $this->db->insert('producto', $data);
     }
     
-    function consultaId(){
-       $this->db->select('nombre_producto,precio_por_unidad,id_producto,stok_producto');
-       $this->db->from("producto");
-         $data = $this->db->get();
-        return $data;
+    function mostrarPedido(){
+       
+        $consulta = "select * from detalle_pedido_producto inner join pedido on detalle_pedido_producto.id_pedido =
+                    pedido.id_pedido inner join producto on detalle_pedido_producto.id_producto = producto.id_producto";
+        
+        $res = $this->db->query($consulta);
+        
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
     }
     
     
