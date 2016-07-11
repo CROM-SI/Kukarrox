@@ -484,9 +484,10 @@ class Controlador extends CI_Controller {
          $this->modelo->regcarrito($data); 
          $data['usuario'] = $this->session->userdata("usuario");
          $data['producto'] = $this->modelo->consultaproducto()->result();
-          $this->load->view("header");
+          
           $this->load->view("carritoC",$data);
-          $this->load->view("footer");
+          
+          redirect(base_url("Controlador/volver2"));
          }else{
           $data['usuario'] = $this->session->userdata("usuario");
           $data['producto'] = $this->modelo->consultaproducto()->result();

@@ -31,7 +31,7 @@
                    <?php }?>
                    </select> 
                    <br><br>
-                   <button  name="nombreCl" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-succes' value="<?=$usuario?>">Agregar a carrito</button> 
+                   <button  name="nombreCl" style="margin-left: 5%;margin-bottom:5%;" class="btn" value="<?=$usuario?>">Agregar a carrito</button> 
                    </div>
                      </form> 
                    <?php endforeach; ?>
@@ -46,6 +46,6 @@
         
 
     
-   <a id="salirCliente" style="margin-left:10%; color: white;" class="btn btn-succes" href="<?=base_url()?>Controlador/volver2">Salir</a>
+   <a id="salirCliente" style="margin-left:10%; color: white;" class="btn btn-succes" href="<?=base_url()?>Controlador/volver2">Salir del Carrito</a>
 </div>
 
