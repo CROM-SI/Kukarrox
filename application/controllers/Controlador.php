@@ -434,11 +434,9 @@ class Controlador extends CI_Controller {
         $data['usuario'] = $this->session->userdata("usuario");
        
         
-        $this->load->view("header");
+      
        $this->load->view("carritoC",$data);
-        $this->load->view("footer");
-        
-        
+    
         
         
     }
