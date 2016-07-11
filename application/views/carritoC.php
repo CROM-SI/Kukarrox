@@ -1,5 +1,7 @@
 
 <div id="content">
+    
+
     <center>
         
        <h3>Bienvenido al carrito <?=$usuario?> </h3>
@@ -29,14 +31,12 @@
                    <?php }?>
                    </select> 
                    <br><br>
-                   <button  name="nombreCl"  style="margin-left: 5%;margin-bottom:5%;" class="btn" value="<?=$usuario?>">Agregar a carrito</button> 
+                   <button  name="nombreCl" style="margin-left: 5%;margin-bottom:5%;" class="btn" value="<?=$usuario?>">Agregar a carrito</button> 
                    </div>
                      </form> 
                    <?php endforeach; ?>
             
             </center>
-            
-            
         </div>
        
             

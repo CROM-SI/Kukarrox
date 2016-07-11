@@ -444,7 +444,6 @@ class Controlador extends CI_Controller {
         $nombre = $this->input->post("nombreC");
         $data['carrito'] = $this->modelo->mostrarcarrito($nombre)->result();
         
-        
         $this->load->view("listacarrito",$data);
         
     }
@@ -508,12 +507,6 @@ class Controlador extends CI_Controller {
     function cargarPedidos(){
         $datos['arrPedidos'] = $this->modelo->mostrarPedido();
         $this->load->view("verPedidos",$datos);
-    }
-    
-    function enviarP(){
-        
-        
-        
     }
     
 }
