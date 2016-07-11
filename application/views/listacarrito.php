@@ -1,10 +1,11 @@
 <div id="content">
 <form method="POST" action="<?=base_url()?>Controlador/eliminarproC">
-    <table>
+    <table id="table" align="center" border="2" width="400">
+        <caption>Mis Productos</caption>
         <tr>
-            <td align="center"><h5>Producto</h5></td>
-            <td align="center"><h5>Precio</h5></td>
-            <td align="center"><h5>Cantidad</h5></td>
+            <th align="center"><h5>Producto</h5></th>
+            <th align="center"><h5>Precio</h5></th>
+            <th align="center"><h5>Cantidad</h5></th>
         </tr>  
         <tr>
             
