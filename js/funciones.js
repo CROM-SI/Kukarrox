@@ -492,6 +492,7 @@ function cargarPedidos() {
     );
 }
 
+
 function cargarVistaPdf() {
 
     $.post(
@@ -512,6 +513,7 @@ function cargarVistaPdf() {
             }
     );
 }
+
 
 
 
