@@ -455,7 +455,12 @@ function cargaralmacen() {
                 $("#menuCliente").show('fast');
 //                $("#paginaLogin2").html(pagina);
 //                $("#paginaLogin2").show('fast');
-                
+                 $("#btn_verPed").click(
+                        function () {
+
+                        }
+
+                );
                 $("#salirCliente").button();
                  
                
