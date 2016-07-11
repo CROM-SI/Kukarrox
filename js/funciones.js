@@ -72,6 +72,7 @@ function cargarContent() {
                 $("#btn_camPassBod").button();
                 $("#salirBod").button();
                 $("#btn_pedido").button();
+                $("#btn_pdf").button();
 
             }
     );
@@ -490,6 +491,28 @@ function cargarPedidos() {
             }
     );
 }
+
+function cargarVistaPdf() {
+
+    $.post(
+            base_url + "Controlador/cargarPdf",
+            {
+            },
+            function (pagina) {
+                $("#menuBod").hide();
+                $("#menuBod").html(pagina);
+                $("#menuBod").show('fast');
+                $("#btn_pdf").click(
+                        function () {
+
+                        }
+
+                );
+
+            }
+    );
+}
+
 
 
 

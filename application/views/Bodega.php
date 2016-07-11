@@ -4,6 +4,8 @@
     <br>
     <br>
     <a href="#" id="btn_pedido" onclick="cargarPedidos()">Ver pedidos</a>
+    <br/><br/>
+    <a href="#" id="btn_pdf" onclick="cargarVistaPdf()">pdf</a>
     
     <br/><br/>
     <a href="#" id="btn_camPassBod" onclick="cargarCamPassBod()">Cambiar contraseña</a>
