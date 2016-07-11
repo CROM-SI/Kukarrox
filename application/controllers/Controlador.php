@@ -432,7 +432,7 @@ class Controlador extends CI_Controller {
         $data['producto'] = $this->modelo->consultaproducto()->result();
         
         $data['usuario'] = $this->session->userdata("usuario");
-        
+       
         
         $this->load->view("header");
        $this->load->view("carritoC",$data);
