@@ -17,8 +17,8 @@
                
                 <td> <?=$i->cantidad?></td>
               
-                <td> <input type="text" hidden="true"  name="id"  value="<?=$i->id_carrito?>"/></td>
-                <td><button id="btneliminarC"  class="btn btn-succes"  >X</button></td>
+                <td> <input type="text" hidden="true"  name=""  value="<?=$i->id_carrito?>"/></td>
+                <td><button id="btneliminarC" name="id" value="<?=$i->id_carrito?>" class="btn btn-succes"  >Eliminar</button></td>
                          
                 </tr>
        

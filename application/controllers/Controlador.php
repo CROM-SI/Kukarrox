@@ -430,11 +430,16 @@ class Controlador extends CI_Controller {
     function cargarCarrito() {
         
         $data['producto'] = $this->modelo->consultaproducto()->result();
+        
         $data['usuario'] = $this->session->userdata("usuario");
         
+        
         $this->load->view("header");
-        $this->load->view("almacen",$data);
+       $this->load->view("carritoC",$data);
         $this->load->view("footer");
+        
+        
+        
         
     }
     function cargarlistacarrito() {
@@ -479,14 +484,16 @@ class Controlador extends CI_Controller {
            );
           
          $this->modelo->regcarrito($data); 
+         $data['usuario'] = $this->session->userdata("usuario");
          $data['producto'] = $this->modelo->consultaproducto()->result();
           $this->load->view("header");
-          $this->load->view("almacen",$data);
+          $this->load->view("carritoC",$data);
           $this->load->view("footer");
          }else{
-             $data['producto'] = $this->modelo->consultaproducto()->result();
+          $data['usuario'] = $this->session->userdata("usuario");
+          $data['producto'] = $this->modelo->consultaproducto()->result();
           $this->load->view("header");
-          $this->load->view("almacen",$data);
+          $this->load->view("carritoC",$data);
           $this->load->view("footer"); 
              
          }

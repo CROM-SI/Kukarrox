@@ -51,8 +51,16 @@ class Modelo extends CI_Model{
         }
         return $perfil;
     }
-    
-    
+    function consultanarnickname($nick){
+        $this->db->select("id_cliente");
+        $this->db->where('nickname', $nick);
+        $idcl = $this->db->get("cliente");
+        foreach ($idcl->result() as $valor) {
+            $idcl = $valor->id_cliente;
+        }
+        return $idcl;
+    }
+   
     
     //    consultar los productos 
     function consultaproducto(){
