@@ -17,7 +17,7 @@
                 echo "<td>".$row->apellido_usuario."</td>";
                 echo "<td>".$row->rut."</td>";
                 echo "<td><a class='btn_editar' href=".base_url()."Controlador/cargarEditarBod/".$row->id_usuario.">Editar</a> | " ;
-                echo "<a class='btn_eliminar' href=".base_url()."Controlador/eliminarBod/".$row->id_usuario.">x</a></td>";
+                echo "<a class='btn_eliminar' href=".base_url()."Controlador/eliminarBod/".$row->id_usuario.">Eliminar</a></td>";
             echo "</tr>";
         }
         
