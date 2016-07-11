@@ -490,6 +490,15 @@ function cargarPedidos() {
             }
     );
 }
+function enviarpedido(){
+     $.post(
+            base_url + "Controlador/cargarPedidos",
+            {
+                
+            });
+    
+    
+}
 
 
 
