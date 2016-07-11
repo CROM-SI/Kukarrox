@@ -4,7 +4,7 @@
     <br>
     <br>
     
-    <a href="<?=base_url()?>Controlador/cargarCarrito" onclick="cargarCarrito()"  id="btn_carrito">Carrito</a>
+    <a href="#" onclick="cargarCarrito()"  id="btn_carrito">Carrito</a>
     <br/><br/>
     <a href="#" onclick=" cargaralmacen()" id="btn_verPed"  >Ver mis pedido</a>
     <br/><br/>

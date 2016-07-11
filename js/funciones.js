@@ -426,7 +426,7 @@ function cargarCarrito() {
                  
             },
             function (pagina) {
-//                $("#menuCliente").hide();
+                $("#menuCliente").hide();
                 $("#menuCliente").html(pagina);
                 $("#menuCliente").show('fast');
                 $("#btn_carrito").click(
