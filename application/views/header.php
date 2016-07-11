@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>../css/jquery-ui.css">
-        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>../css/micss.css">
-        <script type="text/javascript" src="<?= base_url() ?>../js/jquery.js"></script>
-        <script type="text/javascript" src="<?= base_url() ?>../js/jquery-ui.js"></script>
-        <script type="text/javascript" src="<?= base_url() ?>../js/funciones.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/css/micss.css">
+        <script type="text/javascript" src="<?= base_url() ?>/js/jquery.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>/js/funciones.js"></script>
         <script type="text/javascript">
             var base_url = '<?= base_url() ?>';
         </script>

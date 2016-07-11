@@ -32,7 +32,7 @@
                           margin-bottom:2%;
                           width: 32%;
                           border-radius: 6px"/>
-     <input type="text"  id="digitoBod" maxlength="1"
+    <input type="text"  id="digitoBod" maxlength="1" required="true"
                style="color:black;
                margin-left: 4%;
                margin-bottom:2%;
