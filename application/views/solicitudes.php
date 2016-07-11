@@ -1,16 +1,17 @@
 <div id="form2">
     
-    <h3 class="textoregistrarcliente">Solicitud de registro</h3><br/>
-    <table id="table" align="center" border="2" width="650">
+  
+    <table id="table" align="center" border="2" width="750">
+        <caption>Solicitud de registro</caption>
         <tr>
-            <td align="center"><h5>Nombre</h5></td>
-            <td align="center"><h5>Apellido</h5></td>
-            <td align="center"><h5>Direccion del local</h5></td>
-            <td align="center"><h5>Telefono</h5></td>
-            <td align="center"><h5>Ciudad</h5></td>
-            <td align="center"><h5>Rut del cliente</h5></td>
-            <td align="center"><h5>Rol de la empresa</h5></td>
-            <td align="center"><h5>Correo</h5></td>
+            <th align="center"><h5>Nombre</h5></th>
+            <th align="center"><h5>Apellido</h5></th>
+            <th align="center"><h5>Direccion del local</h5></th>
+            <th align="center"><h5>Telefono</h5></th>
+            <th align="center"><h5>Ciudad</h5></th>
+            <th align="center"><h5>Rut del cliente</h5></th>
+            <th align="center"><h5>Rol de la empresa</h5></th>
+            <th align="center"><h5>Correo</h5></th>
         </tr>
         <?php
         foreach ($arrSolicitud->result() as $row){
