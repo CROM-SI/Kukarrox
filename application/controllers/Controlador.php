@@ -161,12 +161,20 @@ class Controlador extends CI_Controller {
     function registrarCliente() {
         $nombre = $this->input->post("nombreCli");
         $apellido = $this->input->post("apellidoCli");
+        
         $rut = $this->input->post("rutCli");
+        $dig =  $this->input->post("digitoCli");
+        $rutFin = $rut. "-".$dig;
+        
+        
         $telefono = $this->input->post("telefonoCli");
-        $ciudad = $this->input->post("cuidadCli");
+        $ciudad = $this->input->post("ciudadCli");
         $correo = $this->input->post("correoCli");
         $rol = $this->input->post("rolCli");
-        $nickname = $this->input->post("nicknameCli");
+        
+        $mitadnick= substr($apellido, 0,1);
+        $nickname = $mitadnick.$nombre.$dig;
+        
         $password = $this->input->post("passwordCli");
         $direccion = $this->input->post("direccionCli");
 
@@ -176,7 +184,7 @@ class Controlador extends CI_Controller {
             'direccion_local' => $direccion,
             'telefono' => $telefono,
             'ciudad' => $ciudad,
-            'rut_cliente' => $rut,
+            'rut_cliente' => $rutFin,
             'rol_local' => $rol,
             'nickname' => $nickname,
             'password' => md5($password),
