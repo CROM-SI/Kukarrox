@@ -161,20 +161,20 @@ class Controlador extends CI_Controller {
     function registrarCliente() {
         $nombre = $this->input->post("nombreCli");
         $apellido = $this->input->post("apellidoCli");
-        
+
         $rut = $this->input->post("rutCli");
-        $dig =  $this->input->post("digitoCli");
-        $rutFin = $rut. "-".$dig;
-        
-        
+        $dig = $this->input->post("digitoCli");
+        $rutFin = $rut . "-" . $dig;
+
+
         $telefono = $this->input->post("telefonoCli");
         $ciudad = $this->input->post("ciudadCli");
         $correo = $this->input->post("correoCli");
         $rol = $this->input->post("rolCli");
-        
-        $mitadnick= substr($apellido, 0,1);
-        $nickname = $mitadnick.$nombre.$dig;
-        
+
+        $mitadnick = substr($apellido, 0, 1);
+        $nickname = $mitadnick . $nombre . $dig;
+
         $password = $this->input->post("passwordCli");
         $direccion = $this->input->post("direccionCli");
 
@@ -236,8 +236,8 @@ class Controlador extends CI_Controller {
         $apellido = $this->input->post("apellido");
         $rut = $this->input->post("rut");
         $dig = strtoupper($this->input->post("dig"));
-        $mitadNick= substr($apellido, 0,1);
-        $nick = $mitadNick.$nombre.$dig;
+        $mitadNick = substr($apellido, 0, 1);
+        $nick = $mitadNick . $nombre . $dig;
         $pass = $this->input->post("pass");
 
         if ($this->rutValido($rut) == $dig) {
@@ -282,15 +282,15 @@ class Controlador extends CI_Controller {
         $this->load->view("intranet");
         $this->load->view("footer");
     }
+
     function eliminarproC() {
         $id = $this->input->post("id");
         $this->modelo->eliminarproductoC($id);
 
-        
+
         $this->load->view("header");
         $this->load->view("pedido");
         $this->load->view("footer");
-
     }
 
     function eliminarPro() {
@@ -399,13 +399,13 @@ class Controlador extends CI_Controller {
             $s = ($s + $r % 10 * (9 - $m++ % 6)) % 11;
         return chr($s ? $s + 47 : 75);
     }
-    
+
     function cargarSolicitud() {
         $this->load->view("header");
         $this->load->view("enviarSolicitud");
         $this->load->view("footer");
     }
-    
+
     function enviarSolicitud() {
         $nombre = $this->input->post("nombreCliSo");
         $apellido = $this->input->post("apellidoCliSo");
@@ -417,7 +417,7 @@ class Controlador extends CI_Controller {
         $correo = $this->input->post("correoCliSo");
         $rol = $this->input->post("rolCliSo");
         $direccion = $this->input->post("direccionCliSo");
-        
+
 
 
         $data = array('nombre_cliente' => $nombre,
@@ -429,53 +429,47 @@ class Controlador extends CI_Controller {
             'rol_local' => $rol,
             'correo' => $correo
         );
-        
-        $this->db->insert("solicitud",$data);
-        
+
+        $this->db->insert("solicitud", $data);
+
         $this->load->view("header");
         $this->load->view("enviarSolicitud");
         $this->load->view("footer");
-        
     }
-    
+
     function cargarCarrito() {
-        
+
         $data['producto'] = $this->modelo->consultaproducto()->result();
-        
+
         $data['usuario'] = $this->session->userdata("usuario");
-       
-        
-      
-       $this->load->view("carritoC",$data);
-    
-        
-        
+
+
+
+        $this->load->view("carritoC", $data);
     }
+
     function cargarlistacarrito() {
         $nombre = $this->input->post("nombreC");
         $data['carrito'] = $this->modelo->mostrarcarrito($nombre)->result();
-        
-        $this->load->view("listacarrito",$data);
-        
+
+        $this->load->view("listacarrito", $data);
     }
-    
-    
+
     function volver2() {
         $this->load->view("header");
         $this->load->view("pedido");
         $this->load->view("footer");
     }
-    
-    function cambiarPassBod(){
-        
+
+    function cambiarPassBod() {
+
         $this->load->view("passBod");
     }
-    
-    
 
-    function almacencarrito(){
-     
-//     $datos = $this->modelo->consultaproducto()->result();
+    function almacencarrito() {
+
+     $datos = $this->modelo->consultaproducto()->result();
+
      if ($this->session->userdata('login2') == true) {
          $nomb = $this->input->post("nombreC");
          $pre = $this->input->post("precioC");
@@ -488,7 +482,8 @@ class Controlador extends CI_Controller {
            'nombre_producto' => $nomb,
            'precio_por_unidad' => $pre,
            'cantidad' => $x,
-           'nombre_us'=>$nombre
+           'nombre_us'=>$nombre,
+             'estado'=>'pendiente'
               
            );
           
@@ -512,19 +507,48 @@ class Controlador extends CI_Controller {
         
          
      }
+
+        if ($this->session->userdata('login2') == true) {
+            $nomb = $this->input->post("nombreC");
+            $pre = $this->input->post("precioC");
+            $x = $this->input->post("cantidadC");
+            $nombre = $this->input->post("nombreCl");
+
+            if ($x > 0) {
+                $data = array(
+                            'nombre_producto' => $nomb,
+                            'precio_por_unidad' => $pre,
+                            'cantidad' => $x,
+                            'nombre_us' => $nombre,
+                            'estado' => 'pendiente'
+                );
+
+                $this->modelo->regcarrito($data);
+                $data['usuario'] = $this->session->userdata("usuario");
+                $data['producto'] = $this->modelo->consultaproducto()->result();
+                $this->load->view("header");
+                $this->load->view("carritoC", $data);
+                $this->load->view("footer");
+            } else {
+                $data['usuario'] = $this->session->userdata("usuario");
+                $data['producto'] = $this->modelo->consultaproducto()->result();
+                $this->load->view("header");
+                $this->load->view("carritoC", $data);
+                $this->load->view("footer");
+            }
+        }
+
     }
-    
-    function cargarPedidos(){
+
+    function cargarPedidos() {
         $datos['arrPedidos'] = $this->modelo->mostrarPedido();
-        $this->load->view("verPedidos",$datos);
+        $this->load->view("verPedidos", $datos);
     }
-    
-    function cargarPdf(){
+
+    function cargarPdf() {
         $this->load->view("vista_pdf");
     }
 
-
-    
     public function generar() {
         $this->load->library('Pdf');
         $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
@@ -533,52 +557,51 @@ class Controlador extends CI_Controller {
         $pdf->SetTitle('');
         $pdf->SetSubject('');
         $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
- 
+
 // datos por defecto de cabecera, se pueden modificar en el archivo tcpdf_config_alt.php de libraries/config
         $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' ', PDF_HEADER_STRING, array(0, 64, 255), array(0, 64, 128));
         $pdf->setFooterData($tc = array(0, 64, 0), $lc = array(0, 64, 128));
- 
+
 // datos por defecto de cabecera, se pueden modificar en el archivo tcpdf_config.php de libraries/config
         $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
         $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
- 
+
 // se pueden modificar en el archivo tcpdf_config.php de libraries/config
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
- 
+
 // se pueden modificar en el archivo tcpdf_config.php de libraries/config
         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
         $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
         $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
- 
+
 // se pueden modificar en el archivo tcpdf_config.php de libraries/config
         $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
- 
+
 //relación utilizada para ajustar la conversión de los píxeles
         $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
- 
- 
+
+
 // ---------------------------------------------------------
 // establecer el modo de fuente por defecto
         $pdf->setFontSubsetting(true);
- 
+
 // Establecer el tipo de letra
- 
 //Si tienes que imprimir carácteres ASCII estándar, puede utilizar las fuentes básicas como
 // Helvetica para reducir el tamaño del archivo.
         $pdf->SetFont('freemono', '', 14, '', true);
- 
+
 // Añadir una página
 // Este método tiene varias opciones, consulta la documentación para más información.
         $pdf->AddPage();
- 
+
 //fijar efecto de sombra en el texto
         $pdf->setTextShadow(array('enabled' => true, 'depth_w' => 0.2, 'depth_h' => 0.2, 'color' => array(196, 196, 196), 'opacity' => 1, 'blend_mode' => 'Normal'));
- 
+
 // Establecemos el contenido para imprimir
-        
-        $nombreU=$this->session->userdata("usuario");
+
+        $nombreU = $this->session->userdata("usuario");
         $carrito = $this->modelo->pdf($nombreU);
-        
+
         //preparamos y maquetamos el contenido a crear
         $html = '';
         $html .= "<style type=text/css>";
@@ -592,31 +615,30 @@ class Controlador extends CI_Controller {
         $html .= "<h3>Detalle del pedido</h3>";
         $html .= "<table width='100%'>";
         $html .= "<tr><th>Nombre producto</th><th>Cantidad</th><th>Precio</th><th>Total</th></tr>";
-        
+
         $nomPro = "";
-        $resultado=0;
+        $resultado = 0;
         //provincias es la respuesta de la función getProvinciasSeleccionadas($provincia) del modelo
-        foreach ($carrito->result() as $row){
-            
+        foreach ($carrito->result() as $row) {
+
             $html .= "<tr>";
-                $html .= "<td>".$row->nombre_producto."</td>";
-                $html .= "<td>".$row->cantidad."</td>";
-                $html .= "<td>".$row->precio_por_unidad."</td>";
-                $total = $row->precio_por_unidad * $row->cantidad;
-                $html .= "<td>".$total."</td>";
-                if ($row->nombre_producto!=$nomPro) {
-                    $nomPro=$row->nombre_producto;
-                    $resultado = $resultado+$total;
-                }
-            $html .= "</tr>";  
-                
+            $html .= "<td>" . $row->nombre_producto . "</td>";
+            $html .= "<td>" . $row->cantidad . "</td>";
+            $html .= "<td>" . $row->precio_por_unidad . "</td>";
+            $total = $row->precio_por_unidad * $row->cantidad;
+            $html .= "<td>" . $total . "</td>";
+            if ($row->nombre_producto != $nomPro) {
+                $nomPro = $row->nombre_producto;
+                $resultado = $resultado + $total;
+            }
+            $html .= "</tr>";
         }
         $html .= "</table>";
-        $html .= "Total del pedido = ".$resultado;
- 
+        $html .= "Total del pedido = " . $resultado;
+
 // Imprimimos el texto con writeHTMLCell()
         $pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
- 
+
 // ---------------------------------------------------------
 // Cerrar el documento PDF y preparamos la salida
 // Este método tiene varias opciones, consulte la documentación para más información.
@@ -624,8 +646,15 @@ class Controlador extends CI_Controller {
         $pdf->Output($nombre_archivo, 'I');
     }
 
-    
-    
-    
-    
+    function eliminarPedido() {
+         $id = $this->uri->segment(3);
+        
+        $this->modelo->eliminarPedido($id);
+
+
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
+
 }

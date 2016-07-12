@@ -18,8 +18,8 @@
                 echo "<td>".$row->cantidad."</td>";
                 echo "<td>".$row->estado."</td>";
                 
-                echo "<td><a class='btn_editarPedido' href=".base_url()."Controlador//".$row->id_pedido.">Editar</a> | " ;
-                echo "<a class='btn_eliminarPedido' href=".base_url()."Controlador//".$row->id_pedido.">Eliminar</a></td>";
+                echo "<td>";
+                echo "<a class='btn_eliminarPedido' href=".base_url()."Controlador/eliminarPedido/".$row->id_carrito.">Eliminar</a></td>";
             echo "</tr>";
         }
         

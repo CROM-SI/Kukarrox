@@ -73,6 +73,8 @@ function cargarContent() {
                 $("#salirBod").button();
                 $("#btn_pedido").button();
                 $("#btn_pdf").button();
+                $("#btn_verPedAdm").button();
+                
 
             }
     );
@@ -512,7 +514,26 @@ function cargarVistaPdf() {
             }
     );
 }
+function cargarPedidoAdm() {
 
+    $.post(
+            base_url + "Controlador/cargarPedidos",
+            {
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_verPedAdm").click(
+                        function () {
+
+                        }
+
+                );
+
+            }
+    );
+}
 
 
 

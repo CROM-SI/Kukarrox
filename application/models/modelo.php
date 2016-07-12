@@ -182,13 +182,16 @@ class Modelo extends CI_Model{
     
     function mostrarPedido(){
        
-       
+       $consulta = "select * from carrito;";
         
+        $res = $this->db->query($consulta);
         if($res->num_rows()>0){
             return $res;
         }else{
             return false;
         }
+        
+        
     }
     
     function pdf($nombreU){
@@ -202,6 +205,10 @@ class Modelo extends CI_Model{
         }
     }
     
+    function eliminarPedido($id){
+        $this->db->where('id_carrito',$id);
+        $this->db->delete('carrito');
+    }
   
     
     
