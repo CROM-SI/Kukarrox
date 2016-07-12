@@ -588,7 +588,7 @@ class Controlador extends CI_Controller {
         $html .= "<h2>Comprobante</h2>";
         $html .= "<h3>Detalle del pedido</h3>";
         $html .= "<table width='100%'>";
-        $html .= "<tr><th>Nombre producto</th><th>Cantidad</th><th>Precio</th></tr>";
+        $html .= "<tr><th>Nombre producto</th><th>Cantidad</th><th>Precio</th><th>Total</th></tr>";
         
         //provincias es la respuesta de la función getProvinciasSeleccionadas($provincia) del modelo
         foreach ($carrito->result() as $row){
@@ -596,10 +596,14 @@ class Controlador extends CI_Controller {
                 $html .= "<td>".$row->nombre_producto."</td>";
                 $html .= "<td>".$row->cantidad."</td>";
                 $html .= "<td>".$row->precio_por_unidad."</td>";
+                $total = $row->precio_por_unidad * $row->cantidad;
+                $html .= "<td>".$total."</td>";
+                $resultado = $total+$total;
             $html .= "</tr>";  
                 
         }
         $html .= "</table>";
+        $html .= "Total del pedido = ".$resultado;
  
 // Imprimimos el texto con writeHTMLCell()
         $pdf->writeHTMLCell($w = 0, $h = 0, $x = '', $y = '', $html, $border = 0, $ln = 1, $fill = 0, $reseth = true, $align = '', $autopadding = true);
