@@ -12,4 +12,4 @@
 </div>
 
 <div id="menuCliente"></div>
-
+<div id="mensajecarrito"></div>
