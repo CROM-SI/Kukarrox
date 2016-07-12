@@ -1,6 +1,6 @@
 
 <form method="post" action="<?= base_url() ?>Controlador/enviarSolicitud">
-    <div class="row">
+    <div class="row" style=" width: 90%;margin-left: 5%">
         <div id="form3">
 
         <h3 class="textoregistrarcliente">Solicitud de registro</h3>
@@ -10,7 +10,7 @@
         </h10>Nombre: <input type="text" name="nombreCliSo" id="nombreCliSo" required="true" maxlength="40"
                              style="
                              color:black;
-                             margin-left: 10%;
+                             margin-left: 12%;
                              margin-bottom:2%; 
                              width: 45%;
                              border-radius: 6px"/>
@@ -19,7 +19,7 @@
         </h10>Apellido: <input type="text"  name="apellidoCliSo" id="apellidoCliSo" required="true" maxlength="40"
                                style="
                                color:black;
-                               margin-left: 10%;
+                               margin-left: 12%;
                                margin-bottom:2%; 
                                width: 45%;
                                border-radius: 6px"
@@ -39,7 +39,7 @@
         </h10>Teléfono: <input type="text" name="telefonoCliSo" id="telefonoCliSo" required="true" maxlength="12"
                          style="
                                color:black;
-                               margin-left: 9%;
+                               margin-left: 11%;
                                margin-bottom:2%; 
                                width: 45%;
                                border-radius: 6px"/>
@@ -48,7 +48,7 @@
         </h10>Ciudad: <input type="text"  name="ciudadCliSo" class="inRegCliSo" id="inRegCliSo" required="true" maxlength="25"
                        style="
                                color:black;
-                               margin-left: 10%;
+                               margin-left: 12%;
                                margin-bottom:2%; 
                                width: 45%;
                                border-radius: 6px"/>
@@ -71,7 +71,7 @@
         </h10>Rol del local: <input type="id" name="rolCliSo" id="rolCliSo" required="true" maxlength="20"
                              style="
                                color:black;
-                               margin-left: 6%;
+                               margin-left: 8%;
                                margin-bottom:2%; 
                                width: 45%;
                                border-radius: 6px"/>
@@ -82,7 +82,7 @@
         </h10>Correo: <input type="text" name="correoCliSo" id="correoCliSo" required="true" maxlength="45"
                       style="
                                color:black;
-                               margin-left: 10%;
+                               margin-left: 12%;
                                margin-bottom:2%; 
                                width: 45%;
                                border-radius: 6px"/>
