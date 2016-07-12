@@ -591,15 +591,21 @@ class Controlador extends CI_Controller {
         $html .= "<table width='100%'>";
         $html .= "<tr><th>Nombre producto</th><th>Cantidad</th><th>Precio</th><th>Total</th></tr>";
         
+        $nomPro = "";
+        $resultado=0;
         //provincias es la respuesta de la función getProvinciasSeleccionadas($provincia) del modelo
         foreach ($carrito->result() as $row){
+            
             $html .= "<tr>";
                 $html .= "<td>".$row->nombre_producto."</td>";
                 $html .= "<td>".$row->cantidad."</td>";
                 $html .= "<td>".$row->precio_por_unidad."</td>";
                 $total = $row->precio_por_unidad * $row->cantidad;
                 $html .= "<td>".$total."</td>";
-                $resultado = $total+$total;
+                if ($row->nombre_producto!=$nomPro) {
+                    $nomPro=$row->nombre_producto;
+                    $resultado = $resultado+$total;
+                }
             $html .= "</tr>";  
                 
         }
