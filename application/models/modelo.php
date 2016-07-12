@@ -208,8 +208,40 @@ class Modelo extends CI_Model{
     function eliminarPedido($id){
         $this->db->where('id_carrito',$id);
         $this->db->delete('carrito');
+        
+    }
+    
+    function consultarNombreProCarr(){
+        $consulta = "select * from carrito;";
+        
+        $res = $this->db->query($consulta);
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
+    function consultarNombrePro(){
+        $consulta = "select * from producto;";
+        
+        $res = $this->db->query($consulta);
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
     }
   
+    function obtenerCarrito($id){
+        $this->db->where('id_carrito',$id);
+        $res = $this->db->get('carrito');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
     
     
 }
