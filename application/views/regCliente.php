@@ -91,7 +91,7 @@
         <br/>
 
         <h10 class="campoenrojo">*
-        </h10>Correo: <input type="email" name="correoCli" required="true" maxlength="20"
+        </h10>Correo: <input type="email" name="correoCli" required="true" maxlength="50"
                       style="
                                color:black;
                                margin-left: 11%;
