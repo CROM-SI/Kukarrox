@@ -26,6 +26,7 @@
         <h10 class="campoenrojo">*
         </h10>Direccion del local: <input  type="text" name="direccionCliSo" id="direccionCliSo" required="true" maxlength="40"
                                            style="
+                                           margin-left: 20px;
                                            color:black;
                                            margin-bottom:2%; 
                                            width: 45%;
@@ -44,7 +45,7 @@
         </h10>Ciudad: <input type="text"  name="ciudadCliSo" class="inRegCliSo" id="inRegCliSo" required="true" maxlength="25"
                        style="
                                color:black;
-                               margin-left: 11%;
+                               margin-left: 10%;
                                margin-bottom:2%; 
                                width: 45%;
                                border-radius: 6px"/>
@@ -52,13 +53,13 @@
         <h10 class="campoenrojo">*
         </h10>Rut: <input type="text" name="rutCliSo" id="rutCliSo" required="true" maxlength="8" 
                           style="color:black;
-                          margin-left: 14%;
+                          margin-left: 109px;
                           margin-bottom:2%;
-                          width: 32%;
+                          width: 31%;
                           border-radius: 6px"/>
         <input type="text"  name="digitoCliSo" id="digitoCliSo" required="true" maxlength="1"
                style="color:black;
-               margin-left: 4%;
+               margin-left: 5%;
                margin-bottom:2%;
                width: 8%;
                border-radius: 6px" />
@@ -78,7 +79,7 @@
         </h10>Correo: <input type="text" name="correoCliSo" id="correoCliSo" required="true" maxlength="45"
                       style="
                                color:black;
-                               margin-left: 11%;
+                               margin-left: 10%;
                                margin-bottom:2%; 
                                width: 45%;
                                border-radius: 6px"/>
