@@ -651,7 +651,39 @@ class Controlador extends CI_Controller {
 
     function eliminarPedido() {
          $id = $this->uri->segment(3);
-        
+         $carrito =$this->modelo->consultarNombreProCarr();
+         $producto = $this->modelo->consultarNombrePro();
+         foreach ($carrito->result() as $row){
+             foreach ($producto->result() as $val){
+                 if ($row->nombre_producto==$val->nombre_producto) {
+                     $idPro = $val->id_producto;
+                     $stockP = $val->stok_producto;
+                     $nombre = $val->nombre_producto;
+                     $precio = $val->precio_por_unidad;
+                     $categoria = $val->id_categoria;
+                 }
+             }
+             
+         }
+         $obtenerCarito=$this->modelo->obtenerCarrito($id);
+         foreach ($obtenerCarito->result() as $c) {
+                
+                $stockC = $c->cantidad;
+                
+            }
+            
+            $resultado = $stockP-$stockC; 
+         
+        $data = array(
+            'nombre_producto' => $nombre,
+            'precio_por_unidad' => $precio,
+            'stok_producto' => $resultado,
+            'id_categoria' => $categoria
+            
+        );
+
+        $this->modelo->editarProducto($idPro,$data);
+         
         $this->modelo->eliminarPedido($id);
 
 
