@@ -573,7 +573,8 @@ class Controlador extends CI_Controller {
  
 // Establecemos el contenido para imprimir
         
-        $pedidos = $this->modelo->mostrarPedido();
+        $nombreU=$this->session->userdata("usuario");
+        $carrito = $this->modelo->pdf($nombreU);
         
         //preparamos y maquetamos el contenido a crear
         $html = '';
@@ -590,7 +591,7 @@ class Controlador extends CI_Controller {
         $html .= "<tr><th>Nombre producto</th><th>Cantidad</th><th>Precio</th></tr>";
         
         //provincias es la respuesta de la función getProvinciasSeleccionadas($provincia) del modelo
-        foreach ($pedidos->result() as $row){
+        foreach ($carrito->result() as $row){
             $html .= "<tr>";
                 $html .= "<td>".$row->nombre_producto."</td>";
                 $html .= "<td>".$row->cantidad."</td>";
@@ -610,6 +611,7 @@ class Controlador extends CI_Controller {
         $pdf->Output($nombre_archivo, 'I');
     }
 
+    
     
     
     

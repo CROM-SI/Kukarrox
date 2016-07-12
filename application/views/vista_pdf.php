@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2 style="text-align: center">Imprime tus localidades</h2>
-<form method="post" action="<?=base_url()?>Controlador/generar" >
+<form method="post" action="<?=base_url()?>Controlador/generar">
 
          <input type="submit" value="Crear PDF" title="Crear PDF" />
       
