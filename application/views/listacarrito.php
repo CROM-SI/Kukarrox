@@ -28,7 +28,11 @@
                  
         </tr>  
     </table>
-   
+
+    
+    <a href="<?=base_url()?>Controlador/generar" id="generarPedido" class="btn btn-succes" style="background-color: red; color: black">Generar Pedido</a>
+    
+
  </form>
     <button id="btn_env" name="envioC" onclick="cargarenvio()" class="btn btn-succes"  >Enviar</button>
 </div>

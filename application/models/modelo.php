@@ -182,11 +182,19 @@ class Modelo extends CI_Model{
     
     function mostrarPedido(){
        
-        $consulta = "select * from detalle_pedido_producto inner join pedido on detalle_pedido_producto.id_pedido =
-                    pedido.id_pedido inner join producto on detalle_pedido_producto.id_producto = producto.id_producto";
+       
+        
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
+    function pdf($nombreU){
+         $consulta = "select * from carrito where nombre_us = '".$nombreU."';";
         
         $res = $this->db->query($consulta);
-        
         if($res->num_rows()>0){
             return $res;
         }else{

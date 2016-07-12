@@ -40,7 +40,7 @@
                                border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Ciudad: <input type="text" required="true" name="ciudadCli" class="inRegCli" maxlength="15"
+        </h10>Ciudad: <input type="text" required="true" name="ciudadCli"  maxlength="15"
                        style="
                                color:black;
                                margin-left: 11%;
@@ -71,8 +71,8 @@
                                width: 45%;
                                border-radius: 6px"/>
         <br/>
-        <h10 class="campoenrojo">*
-        </h10>Nickname: <input type="text" name="nicknameCli" required="true" maxlength="15"
+        <h10>*
+        </h10>Nickname: <input type="text" name="nicknameCli" value="Primera letra del Apellido+Nombre+Digito de Rut" disabled="true"
                         style="
                                color:black;
                                margin-left: 8%;
