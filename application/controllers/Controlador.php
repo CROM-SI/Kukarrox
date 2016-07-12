@@ -632,8 +632,9 @@ class Controlador extends CI_Controller {
             $html .= "<td>" . $total . "</td>";
             if ($row->nombre_producto != $nomPro) {
                 $nomPro = $row->nombre_producto;
-                $resultado = $resultado + $total;
+                
             }
+            $resultado = $resultado + $total;
             $html .= "</tr>";
         }
         $html .= "</table>";

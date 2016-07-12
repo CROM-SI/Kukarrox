@@ -37,6 +37,8 @@
                   >Generar Pedido</a>
  
         </center>
+        
+        <a href="<?=base_url()?>Controlador/cargarPedido" class="btn" id="volLista">Volver</a>
     </div>
 
  </form>
