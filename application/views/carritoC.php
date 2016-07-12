@@ -12,7 +12,7 @@
             <center >
                <?php foreach ($producto as $i): ?> 
                 <form method="POST" action="<?=base_url()?>Controlador/almacencarrito">                
-                <div style="border:2px solid #CF3 ;margin-bottom:5% " >
+                <div style="border:2px solid chartreuse ;margin-bottom:5%; width: 50% ; border-radius: 5%;" >
                    
                     <p >Nombre Producto :<?= $i->nombre_producto  ?></p>
                     <input type="text" name="nombreC" hidden="true" value="<?= $i->nombre_producto ?>"/>

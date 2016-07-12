@@ -493,20 +493,20 @@ class Controlador extends CI_Controller {
          $this->modelo->regcarrito($data); 
          $data['usuario'] = $this->session->userdata("usuario");
          $data['producto'] = $this->modelo->consultaproducto()->result();
-          $this->load->view("header");
-          $this->load->view("carritoC",$data);
-          $this->load->view("footer");
+//          $this->load->view("header");
+//          $this->load->view("cliete",$data);
+//          $this->load->view("footer");
          }else{
           $data['usuario'] = $this->session->userdata("usuario");
           $data['producto'] = $this->modelo->consultaproducto()->result();
-          $this->load->view("header");
-          $this->load->view("carritoC",$data);
-          $this->load->view("footer"); 
+//          $this->load->view("header");
+//          $this->load->view("cliente",$data);
+//          $this->load->view("footer"); 
              
          }
          
          
-         
+         redirect("Controlador/cargarPedido");
         
          
      }
