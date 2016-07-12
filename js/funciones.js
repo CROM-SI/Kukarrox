@@ -92,7 +92,7 @@ function cargarContent2() {
                 $("#btn_verPed").button();
                 $("#btn_camPass").button();
                 $("#salirCli").button();
-                
+                cargarCarrito();
             }
     );
 }
