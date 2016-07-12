@@ -34,5 +34,5 @@
     
 
  </form>
-    <button id="btn_env" name="envioC" onclick="cargarenvio()" class="btn btn-succes"  >Enviar</button>
+   
 </div>
