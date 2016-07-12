@@ -236,7 +236,8 @@ class Controlador extends CI_Controller {
         $apellido = $this->input->post("apellido");
         $rut = $this->input->post("rut");
         $dig = strtoupper($this->input->post("dig"));
-        $nick = $this->input->post("nick");
+        $mitadNick= substr($apellido, 0,1);
+        $nick = $mitadNick.$nombre.$dig;
         $pass = $this->input->post("pass");
 
         if ($this->rutValido($rut) == $dig) {

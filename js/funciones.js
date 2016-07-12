@@ -251,7 +251,6 @@ function cargarRegistroBod() {
                             $("#apellidoBod").val('');
                             $("#rutBod").val('');
                             $("#digitoBod").val('');
-                            $("#nicknameBod").val('');
                             $("#passwordBod").val('');
                             $("#nombreBod").focus();
                         }

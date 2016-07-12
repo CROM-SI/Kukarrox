@@ -40,7 +40,8 @@
                border-radius: 6px" />
     <br/>
     <h10 class="campoenrojo">*</h10>
-    Nickname: <input type="text" id="nicknameBod"  required="true" maxlength="15"
+    Nickname: <input type="text" id="nicknameBod" disabled="true"  required="true" maxlength="15" 
+                     value="Primera letra del Apellido+Nombre+Digito de Rut"  
                      style="
                                color:black;
                                margin-left: 8%;
