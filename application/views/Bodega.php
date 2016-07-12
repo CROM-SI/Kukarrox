@@ -1,5 +1,5 @@
 <div id="content">
-    <h2 style="text-align: center">Bienvenido encargado de bodega: <?=$usuario?></h2>
+    <h2 style="text-align: center">Bienvenido Bodeguero: <?=$usuario?></h2>
 
     <br>
     <br>

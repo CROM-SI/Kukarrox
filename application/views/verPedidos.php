@@ -7,7 +7,6 @@
             <th style="text-align:center"><h5>Precio</h5></th>
             <th style="text-align:center"><h5>Cantidad</h5></th>
             <th style="text-align:center"><h5>Estado</h5></th>
-             
             <th style="text-align:center"><h5>Accion</h5></th>
         </tr>
         <?php

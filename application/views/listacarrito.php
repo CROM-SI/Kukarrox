@@ -1,11 +1,11 @@
-<div id="content">
+<div id="content" style="padding-right: 23%; margin-top: 5%">
 <form method="POST" action="<?=base_url()?>Controlador/eliminarproC">
     <table id="table"  border="2" width="500">
         <caption>Mis Productos</caption>
         <tr>
-            <th align="center"><h5>Producto</h5></th>
-            <th align="center"><h5>Precio</h5></th>
-            <th align="center"><h5>Cantidad</h5></th>
+            <th style="text-align:center"><h5>Producto</h5></th>
+            <th style="text-align:center"><h5>Precio</h5></th>
+            <th style="text-align:center"><h5>Cantidad</h5></th>
             
         </tr>  
         <tr>
@@ -33,7 +33,7 @@
         <center>
             
                <a href="<?=base_url()?>Controlador/generar" id="generarPedido"  class="btn btn-succes" 
-                  style="background-color: red; color: black" 
+                  style="background-color: red; color: black; margin-left: 135%" 
                   >Generar Pedido</a>
  
         </center>
