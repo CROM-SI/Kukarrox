@@ -14,7 +14,9 @@
                                margin-left: 9%;
                                margin-bottom:2%; 
                                width: 45%;
-                               border-radius: 6px"/>
+                               border-radius: 6px"
+                               
+                               />
     <br/>
     <h10 class="campoenrojo">*</h10>
     Apellido: <input type="text" id="apellidoBod" required="true" maxlength="10"
