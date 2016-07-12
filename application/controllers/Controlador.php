@@ -487,6 +487,7 @@ class Controlador extends CI_Controller {
               
            );
           
+            
          $this->modelo->regcarrito($data); 
          $data['usuario'] = $this->session->userdata("usuario");
          $data['producto'] = $this->modelo->consultaproducto()->result();
@@ -494,6 +495,7 @@ class Controlador extends CI_Controller {
 //          $this->load->view("cliete",$data);
 //          $this->load->view("footer");
          }else{
+             
           $data['usuario'] = $this->session->userdata("usuario");
           $data['producto'] = $this->modelo->consultaproducto()->result();
 //          $this->load->view("header");
@@ -530,6 +532,8 @@ class Controlador extends CI_Controller {
                 $this->load->view("carritoC", $data);
                 $this->load->view("footer");
             } else {
+                $data['mensaje'] = "Seleccione cantidad valida";
+                $data['valido'] = true;
                 $data['usuario'] = $this->session->userdata("usuario");
                 $data['producto'] = $this->modelo->consultaproducto()->result();
                 $this->load->view("header");
@@ -657,4 +661,5 @@ class Controlador extends CI_Controller {
         $this->load->view("footer");
     }
 
+     
 }

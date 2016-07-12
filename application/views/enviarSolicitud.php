@@ -1,3 +1,4 @@
+
 <form method="post" action="<?= base_url() ?>Controlador/enviarSolicitud">
     <div class="row">
         <div id="form3">
@@ -21,7 +22,9 @@
                                margin-left: 10%;
                                margin-bottom:2%; 
                                width: 45%;
-                               border-radius: 6px"/>
+                               border-radius: 6px"
+                               
+                               />
         <br/>
         <h10 class="campoenrojo">*
         </h10>Direccion del local: <input  type="text" name="direccionCliSo" id="direccionCliSo" required="true" maxlength="40"

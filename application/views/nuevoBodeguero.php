@@ -1,6 +1,8 @@
 
 <div id="form">
     
+    
+    
     <h3 class="textoregistrarcliente">Registrar encargado de bodega</h3>
     <h5>Los campos marcados en <h10 class="campoenrojo">*</h10> son obligatorios</h5>
     <br/>
@@ -16,6 +18,7 @@
                                width: 45%;
                                border-radius: 6px"
                                
+                               
                                />
     <br/>
     <h10 class="campoenrojo">*</h10>
@@ -25,7 +28,10 @@
                                margin-left: 9%;
                                margin-bottom:2%; 
                                width: 45%;
-                               border-radius: 6px"/>
+                               border-radius: 6px"
+                               
+                               
+                               />
     <br/>
     <h10 class="campoenrojo">*</h10>
     Rut: <input type="text" id="rutBod" required="true" maxlength="8"
@@ -61,8 +67,7 @@
                                border-radius: 6px"/>
     <br/>
     <button id="btn_botReg" style="margin-top: 5%; border: 1px black solid" class="btn btn-succes">Guardar</button>
-    
-    
+   
 </div>
 
 

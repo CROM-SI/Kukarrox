@@ -32,7 +32,7 @@
     <div>
         <center>
             
-               <a href="<?=base_url()?>Controlador/generar" id="generarPedido" class="btn btn-succes" 
+               <a href="<?=base_url()?>Controlador/generar" id="generarPedido"  class="btn btn-succes" 
                   style="background-color: red; color: black" 
                   >Generar Pedido</a>
  
