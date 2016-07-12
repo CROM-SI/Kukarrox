@@ -248,6 +248,16 @@ select {
 #btn_regCli:hover{
     background: black;
 }
+
+#btn_verPedAdm{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#btn_verPedAdm:hover{
+    background: black;
+}
+
 #btn_verBod{
     background: green;
     border-radius: 15px 15px 15px 15px;
