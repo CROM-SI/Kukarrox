@@ -320,7 +320,6 @@ select {
     background: black;
 }
 
-
 #btn_carrito{
     background: green;
     border-radius: 15px 15px 15px 15px;
@@ -329,8 +328,30 @@ select {
 #btn_carrito:hover{
     background: black;
 }
+#btn_pedido{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
 
+}
+#btn_pedido:hover{
+    background: black;
+}
+#btn_camPassBod{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
 
+}
+#btn_camPassBod:hover{
+    background: black;
+}
+#salirBod{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+
+}
+#salirBod:hover{
+    background: black;
+}
 
 /*FOTO LOCAL*/
 
@@ -446,6 +467,26 @@ td .btn_eliminar{
 }
 td .btn_eliminar:hover{
     background: red;
+}
+/*-------------------------*/
+td .btn_editarPedido{
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 10%;
+}
+td .btn_editarPedido:hover{
+    color:black;
+    background: #D0D0D0;
+ 
+    
+}
+
+td .btn_eliminarPedido{  
+    background: #dff0d8;
+    border-radius: 15px 15px 15px 15px;
+}
+td .btn_eliminarPedido:hover{
+    background: red;
+    color: black;
 }
 
 table {     

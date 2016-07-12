@@ -5,10 +5,10 @@
     <table id="table" align="center" border="2" width="400">
         <caption>Encargados actuales de Bodega</caption>
         <tr>
-            <th align="center"><h5>Nombre</h5></th>
-            <th align="center"><h5>Apellido</h5></th>
-            <th align="center"><h5>Rut</h5></th>
-            <th align="center"><h5>Accion</h5></th>
+            <th style="text-align:center"><h5>Nombre</h5></th>
+            <th style="text-align:center"><h5>Apellido</h5></th>
+            <th style="text-align:center"><h5>Rut</h5></th>
+            <th style="text-align:center"><h5>Accion</h5></th>
         </tr>
         <?php
         foreach ($arrBodegueros->result() as $row){

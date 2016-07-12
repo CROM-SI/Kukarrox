@@ -3,10 +3,10 @@
     <table id="table" align="center" border="2" width="400">
         <caption>Productos en bodega</caption>
         <tr>
-            <th align="center"><h5>Nombre</h5></th>
-            <th align="center"><h5>Precio</h5></th>
-            <th align="center"><h5>Stock</h5></th>
-            <th align="center"><h5>Accion</h5></th>
+            <th style="text-align:center"><h5>Nombre</h5></th>
+            <th style="text-align:center"><h5>Precio</h5></th>
+            <th style="text-align:center"><h5>Stock</h5></th>
+            <th style="text-align:center"><h5>Acción</h5></th>
         </tr>
         <?php
         foreach ($arrProductos->result() as $row){
