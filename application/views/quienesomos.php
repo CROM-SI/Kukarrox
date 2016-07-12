@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="width: 99%;padding-top: 4%;">
 
 <div class="col-md-7">
     <h3 style="color: black; letter-spacing: 5px; font-weight: bolder; margin-left: 6%;"  >Quienes  Somos</h3>
