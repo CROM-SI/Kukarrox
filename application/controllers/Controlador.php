@@ -410,6 +410,8 @@ class Controlador extends CI_Controller {
         $nombre = $this->input->post("nombreCliSo");
         $apellido = $this->input->post("apellidoCliSo");
         $rut = $this->input->post("rutCliSo");
+        $dig=  $this->input->post("digitoCliSo");
+        $rutFin=$rut."-".$dig;
         $telefono = $this->input->post("telefonoCliSo");
         $ciudad = $this->input->post("cuidadCliSo");
         $correo = $this->input->post("correoCliSo");
@@ -423,7 +425,7 @@ class Controlador extends CI_Controller {
             'direccion_local' => $direccion,
             'telefono' => $telefono,
             'ciudad' => $ciudad,
-            'rut_cliente' => $rut,
+            'rut_cliente' => $rutFin,
             'rol_local' => $rol,
             'correo' => $correo
         );
