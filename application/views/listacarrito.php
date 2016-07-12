@@ -28,10 +28,16 @@
                  
         </tr>  
     </table>
-
-    
-    <a href="<?=base_url()?>Controlador/generar" id="generarPedido" class="btn btn-succes" style="background-color: red; color: black">Generar Pedido</a>
-    
+    <br> <br>
+    <div>
+        <center>
+            
+               <a href="<?=base_url()?>Controlador/generar" id="generarPedido" class="btn btn-succes" 
+                  style="background-color: red; color: black" 
+                  >Generar Pedido</a>
+ 
+        </center>
+    </div>
 
  </form>
    

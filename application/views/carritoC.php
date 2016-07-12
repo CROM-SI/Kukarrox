@@ -4,7 +4,7 @@
 
     <center>
         
-       <h3>Bienvenido al carrito <?=$usuario?> </h3>
+        <h1><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h1>
          
     </center>
    
