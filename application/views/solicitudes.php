@@ -1,4 +1,4 @@
-<div id="form2">
+<div id="form2" style=" margin-right: 12%;">
     
   
     <table id="table" align="center" border="2" width="500">
@@ -8,7 +8,7 @@
             <th style="text-align: center"><h5>Apellido</h5></th>
             <th style="text-align: center"><h5>Direccion del local</h5></th>
             <th style="text-align: center"><h5>Telefono</h5></th>
-            <th style="text-align: center; padding: 4%;"><h5>Ciudad</h5></th>
+            <th style="text-align: center; padding-left: 4%;padding-right: 4%"><h5>Ciudad</h5></th>
             <th style="text-align: center"><h5>Rut del cliente</h5></th>
             <th style="text-align: center"><h5>Rol de la empresa</h5></th>
             <th style="text-align: center"><h5>Correo</h5></th>

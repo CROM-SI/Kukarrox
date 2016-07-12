@@ -1,4 +1,4 @@
-<div id="content" style="width: 30%;">
+<div id="content" style="width: 30%">
     <h2 style="text-align: center">Bienvenido Adminstrador</h2>
 
     <br>
