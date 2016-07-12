@@ -9,7 +9,6 @@
         <script type="text/javascript">
             var base_url = '<?= base_url() ?>';
         </script>
-        <script type="text/javascript" src="jquery.js"></script>
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
