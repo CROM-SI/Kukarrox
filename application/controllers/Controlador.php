@@ -490,15 +490,11 @@ class Controlador extends CI_Controller {
          $this->modelo->regcarrito($data); 
          $data['usuario'] = $this->session->userdata("usuario");
          $data['producto'] = $this->modelo->consultaproducto()->result();
-//          $this->load->view("header");
-//          $this->load->view("cliete",$data);
-//          $this->load->view("footer");
+
          }else{
           $data['usuario'] = $this->session->userdata("usuario");
           $data['producto'] = $this->modelo->consultaproducto()->result();
-//          $this->load->view("header");
-//          $this->load->view("cliente",$data);
-//          $this->load->view("footer"); 
+      
              
          }
          
@@ -508,35 +504,6 @@ class Controlador extends CI_Controller {
          
      }
 
-        if ($this->session->userdata('login2') == true) {
-            $nomb = $this->input->post("nombreC");
-            $pre = $this->input->post("precioC");
-            $x = $this->input->post("cantidadC");
-            $nombre = $this->input->post("nombreCl");
-
-            if ($x > 0) {
-                $data = array(
-                            'nombre_producto' => $nomb,
-                            'precio_por_unidad' => $pre,
-                            'cantidad' => $x,
-                            'nombre_us' => $nombre,
-                            'estado' => 'pendiente'
-                );
-
-                $this->modelo->regcarrito($data);
-                $data['usuario'] = $this->session->userdata("usuario");
-                $data['producto'] = $this->modelo->consultaproducto()->result();
-                $this->load->view("header");
-                $this->load->view("carritoC", $data);
-                $this->load->view("footer");
-            } else {
-                $data['usuario'] = $this->session->userdata("usuario");
-                $data['producto'] = $this->modelo->consultaproducto()->result();
-                $this->load->view("header");
-                $this->load->view("carritoC", $data);
-                $this->load->view("footer");
-            }
-        }
 
     }
 

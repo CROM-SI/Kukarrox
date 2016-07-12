@@ -1,5 +1,5 @@
 
-<div id="form">
+<div id="form" ">
     
     <h3 class="textoregistrarcliente">Registrar encargado de bodega</h3>
     <h5>Los campos marcados en <h10 class="campoenrojo">*</h10> son obligatorios</h5>
@@ -13,7 +13,7 @@
                                color:black;
                                margin-left: 9%;
                                margin-bottom:2%; 
-                               width: 45%;
+                               width: 55%;
                                border-radius: 6px"
                                
                                />
@@ -24,7 +24,7 @@
                                color:black;
                                margin-left: 9%;
                                margin-bottom:2%; 
-                               width: 45%;
+                               width: 55%;
                                border-radius: 6px"/>
     <br/>
     <h10 class="campoenrojo">*</h10>
@@ -32,13 +32,13 @@
                 style="color:black;
                           margin-left: 14%;
                           margin-bottom:2%;
-                          width: 32%;
+                          width: 39%;
                           border-radius: 6px"/>
     <input type="text"  id="digitoBod" maxlength="1" required="true"
                style="color:black;
                margin-left: 4%;
                margin-bottom:2%;
-               width: 8%;
+               width: 11%;
                border-radius: 6px" />
     <br/>
     <h10 class="campoenrojo">*</h10>
@@ -48,7 +48,7 @@
                                color:black;
                                margin-left: 8%;
                                margin-bottom:2%; 
-                               width: 45%;
+                               width: 55%;
                                border-radius: 6px"/>
     <br/>
     <h10 class="campoenrojo">*</h10>
@@ -57,7 +57,7 @@
                                color:black;
                                margin-left: 9%;
                                margin-bottom:2%; 
-                               width: 45%;
+                               width: 55%;
                                border-radius: 6px"/>
     <br/>
     <button id="btn_botReg" style="margin-top: 5%; border: 1px black solid" class="btn btn-succes">Guardar</button>
