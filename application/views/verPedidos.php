@@ -18,7 +18,7 @@
                 echo "<td>".$row->estado."</td>";
                 
                 echo "<td>";
-                echo "<a class='btn_eliminarPedido' href=".base_url()."Controlador/eliminarPedido/".$row->id_carrito.">Eliminar</a></td>";
+                echo "<a class='btn_eliminarPedido' href=".base_url()."Controlador/eliminarPedido/".$row->id_carrito."><span class='glyphicon glyphicon-ok' aria-hidden='true'></span></a></td>";
             echo "</tr>";
         }
         
