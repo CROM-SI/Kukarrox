@@ -1,7 +1,7 @@
 <div id="form2">
     
-    <h3 class="textoregistrarcliente">Pedidos</h3><br/>
     <table id="table" align="center" border="2" width="300">
+        <caption>Pedidos</caption>
         <tr>
             <th style="text-align:center"><h5>Nombre producto</h5></th>
             <th style="text-align:center"><h5>Precio</h5></th>
