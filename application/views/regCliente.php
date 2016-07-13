@@ -15,7 +15,9 @@
                              border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Apellido: <input type="text"  name="apellidoCli" required="true" maxlength="15" pattern="^[a-zA-Z]{3,15}"
+        </h10>Apellido: <input type="text"  name="apellidoCli"
+                        required="true" maxlength="15" 
+                        pattern="^[a-zA-Z]{3,15}"
                                style="
                                color:black;
                                margin-left: 10%;
@@ -33,7 +35,8 @@
                                            border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Teléfono: <input type="tel" name="telefonoCli" required="true"maxlength="9" pattern="[0-9]{9}"
+        </h10>Teléfono: <input type="tel" name="telefonoCli" required="true"
+                        maxlength="9" pattern="[0-9]{9}"
                          style="
                                color:black;
                                margin-left: 9%;
@@ -42,7 +45,8 @@
                                border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Ciudad: <input type="text" required="true" name="ciudadCli"  maxlength="15" pattern="[a-zA-Z]{3,25}"
+        </h10>Ciudad: <input type="text" required="true" name="ciudadCli" 
+                      maxlength="15" pattern="[a-zA-Z]{3,25}"
                        style="
                                color:black;
                                margin-left: 11%;
@@ -51,13 +55,15 @@
                                border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Rut: <input type="text" name="rutCli" maxlength="8" required="true"  pattern="[0-9]{8}"
+        </h10>Rut: <input type="text" name="rutCli" maxlength="8"
+                   required="true"  pattern="[0-9]{8}"
                           style="color:black;
                           margin-left: 14%;
                           margin-bottom:2%;
                           width: 32%;
                           border-radius: 6px"/>
         <input type="text"  name="digitoCli"  maxlength="1" required="true"
+               
                style="color:black;
                margin-left: 4%;
                margin-bottom:2%;
@@ -65,7 +71,9 @@
                border-radius: 6px" />
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Rol del local: <input type="id" name="rolCli" required="true" maxlength="10"  pattern="[0-9]{3,20}"
+        </h10>Rol del local: <input type="id" name="rolCli" 
+                             required="true" maxlength="10"  
+                             pattern="[0-9]{3,20}"
                              style="
                                color:black;
                                margin-left: 6%;
