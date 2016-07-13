@@ -682,8 +682,16 @@ class Controlador extends CI_Controller {
             'id_categoria' => $categoria
             
         );
+        $reg = array(
+            'cantidad' => $stockC,
+            'precio_por_unidad' => $precio,
+            'nombre_producto' => $nombre,
+            'estado' => 'realizado'
+        );
 
         $this->modelo->editarProducto($idPro,$data);
+        
+        $this->db->insert("registro_pedido",$reg);
          
         $this->modelo->eliminarPedido($id);
 
@@ -691,6 +699,11 @@ class Controlador extends CI_Controller {
         $this->load->view("header");
         $this->load->view("intranet");
         $this->load->view("footer");
+    }
+    
+    function cargarReg(){
+        $data['arrRegistros'] = $this->modelo->mostrarReg();
+        $this->load->view("registros",$data);
     }
 
      

@@ -243,6 +243,17 @@ class Modelo extends CI_Model{
         }
     }
     
+    function mostrarReg(){
+        $consulta = "select * from registro_pedido;";
+        
+        $res = $this->db->query($consulta);
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
     
 }
 ?>

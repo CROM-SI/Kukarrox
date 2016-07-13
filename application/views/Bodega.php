@@ -6,7 +6,7 @@
     <a href="#" id="btn_pedido" onclick="cargarPedidos()">Ver pedidos</a>
     
     <br/><br/>
-    <a href="#" id="btn_camPassBod" onclick="cargarCamPassBod()">Cambiar contraseña</a>
+    <a href="#" id="btn_carReg" onclick="cargarReg()">Registro de pedidos</a>
     <br/><br/>
     
     <a id="salirBod"  href="<?=base_url()?>Controlador/salir">Salir</a>

@@ -74,6 +74,8 @@ function cargarContent() {
                 $("#btn_pedido").button();
                 $("#btn_pdf").button();
                 $("#btn_verPedAdm").button();
+                $("#btn_carReg").button();
+                $("#btn_carRegAdm").button();
                 
 
             }
@@ -494,17 +496,17 @@ function cargarPedidos() {
 }
 
 
-function cargarVistaPdf() {
+function cargarReg() {
 
     $.post(
-            base_url + "Controlador/cargarPdf",
+            base_url + "Controlador/cargarReg",
             {
             },
             function (pagina) {
                 $("#menuBod").hide();
                 $("#menuBod").html(pagina);
                 $("#menuBod").show('fast');
-                $("#btn_pdf").click(
+                $("#btn_carReg").click(
                         function () {
 
                         }
@@ -525,6 +527,27 @@ function cargarPedidoAdm() {
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
                 $("#btn_verPedAdm").click(
+                        function () {
+
+                        }
+
+                );
+
+            }
+    );
+}
+
+function cargarRegAdm() {
+
+    $.post(
+            base_url + "Controlador/cargarReg",
+            {
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_carRegAdm").click(
                         function () {
 
                         }

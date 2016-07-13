@@ -16,6 +16,8 @@
     <a href="#" id="btn_Prod" onclick="cargarIngresaPro()">Ingresar Productos </a>
     <br/><br/> 
     <a href="#" id="btn_VerPro" onclick="cargarVerPro()">Ver Productos </a>
+    <br/><br/> 
+    <a href="#" id="btn_carRegAdm" onclick="cargarRegAdm()">Registro de pedidos </a>
     <br/><br/>
     <br/><br/>
     <a id="salirAdm"  href="<?=base_url()?>Controlador/salir">Salir</a>
