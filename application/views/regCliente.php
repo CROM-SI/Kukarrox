@@ -6,6 +6,7 @@
         <br/>
         <h10 class="campoenrojo">*
         </h10>Nombre: <input type="text" name="nombreCli" required="true" maxlength="15"
+                      pattern="^[a-zA-Z]{3,15}"
                              style="
                              color:black;
                              margin-left: 10%;
@@ -14,7 +15,7 @@
                              border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Apellido: <input type="text"  name="apellidoCli" required="true" maxlength="15"
+        </h10>Apellido: <input type="text"  name="apellidoCli" required="true" maxlength="15" pattern="^[a-zA-Z]{3,15}"
                                style="
                                color:black;
                                margin-left: 10%;
@@ -24,6 +25,7 @@
         <br/>
         <h10 class="campoenrojo">*
         </h10>Direccion del local: <input  type="text" name="direccionCli" required="true"maxlength="50"
+                                     pattern="^[a-zA-Z]{3,40} [#]{1}[0-9]{1,5}"
                                            style="
                                            color:black;
                                            margin-bottom:2%; 
@@ -31,7 +33,7 @@
                                            border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Teléfono: <input type="text" name="telefonoCli" required="true"maxlength="9"
+        </h10>Teléfono: <input type="tel" name="telefonoCli" required="true"maxlength="9" pattern="[0-9]{9}"
                          style="
                                color:black;
                                margin-left: 9%;
@@ -40,7 +42,7 @@
                                border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Ciudad: <input type="text" required="true" name="ciudadCli"  maxlength="15"
+        </h10>Ciudad: <input type="text" required="true" name="ciudadCli"  maxlength="15" pattern="[a-zA-Z]{3,25}"
                        style="
                                color:black;
                                margin-left: 11%;
@@ -49,7 +51,7 @@
                                border-radius: 6px"/>
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Rut: <input type="text" name="rutCli" maxlength="8" required="true"
+        </h10>Rut: <input type="text" name="rutCli" maxlength="8" required="true"  pattern="[0-9]{8}"
                           style="color:black;
                           margin-left: 14%;
                           margin-bottom:2%;
@@ -63,7 +65,7 @@
                border-radius: 6px" />
         <br/>
         <h10 class="campoenrojo">*
-        </h10>Rol del local: <input type="id" name="rolCli" required="true" maxlength="10"
+        </h10>Rol del local: <input type="id" name="rolCli" required="true" maxlength="10"  pattern="[0-9]{3,20}"
                              style="
                                color:black;
                                margin-left: 6%;
@@ -72,7 +74,7 @@
                                border-radius: 6px"/>
         <br/>
         <h10>*
-        </h10>Nickname: <input type="text" name="nicknameCli" value="Primera letra del Apellido+Nombre+Digito de Rut" disabled="true"
+        </h10>Nickname: <input type="text" name="nicknameCli" value="Apellido+Digito verificador del Rut" disabled="true"
                         style="
                                color:black;
                                margin-left: 8%;

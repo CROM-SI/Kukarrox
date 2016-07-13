@@ -49,7 +49,7 @@
     <br/>
     <h10 class="campoenrojo">*</h10>
     Nickname: <input type="text" id="nicknameBod" disabled="true"  required="true" maxlength="15" 
-                     value="Primera letra del Apellido+Nombre+Digito de Rut"  
+                     value="Apellido+Digito verificador del Rut"  
                      style="
                                color:black;
                                margin-left: 8%;

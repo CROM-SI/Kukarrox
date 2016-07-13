@@ -12,10 +12,11 @@
                    margin-bottom:2%;
                    width: 41%;
                    border-radius: 6px" 
-                   type="text" id="nombrePro"  required="true" maxlength="20" />
+                   type="text" id="nombrePro"  
+                   pattern="^[a-zA-Z]{3,20}" required="true" maxlength="20" />
     <br/>
     <h10 class="campoenrojo">*</h10>
-    Precio: <input type="text" 
+    Precio: <input type="text"  pattern="[0-9]{3,8}"
                    style="color:black;
                    margin-left: 13%; 
                    margin-bottom:2%; 
@@ -24,7 +25,7 @@
                    id="precioPro"  required="true" maxlength="6" />
     <br/>
     <h10 class="campoenrojo">*</h10>
-    Stock: <input type="text" 
+    Stock: <input type="text" pattern="[0-9]{3,8}}"
                  style="color:black;
                  margin-left: 14%; 
                  margin-bottom:2%; 
