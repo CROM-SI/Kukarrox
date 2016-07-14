@@ -1,29 +1,9 @@
 
 <div id="content" style="margin-top: 5%;">
-    
-
-    <center>
-        
-<!--        <h1><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h1>-->
-         
-    </center>
-
-    <div class="row">
-    
-    <div ></div>
-    <div >
-            
-         
-
-   
+ 
         <div class="pagination-sm">
-      
-            <form method="POST" class="pagination-sm" action="<?=base_url()?>Controlador/cargarCarrito">
-        
-            </form>
-        <br><br>
-
-        
+     
+  
             <center>
                
                <?php foreach  ($producto as $i): ?> 
@@ -61,10 +41,6 @@
         
         </div>
 
-    </div>
-        
-
-    
  
 </div>
 
