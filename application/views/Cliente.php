@@ -12,7 +12,7 @@
                 <?php endforeach; ?>
                    </select>
     
-    <a href="#" onclick="cargarCarrito()"  id="btn_carrito" hidden="true" >Carrito</a>
+     
     <br/><br/>
     <a href="#" onclick=" cargaralmacen()" id="btn_verPed"  >Ver mis pedido</a>
     <br/><br/>
