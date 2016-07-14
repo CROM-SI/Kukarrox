@@ -302,17 +302,41 @@ select {
 
 
 
+button .nose {
+ transform-style: preserve-3d;
+}
+
+button .nose:after {
+ top: -100%;
+ left: 0px;
+ width: 100%;
+ position: absolute;
+ background: #3a9999;
+ border-radius: 5px;
+ content: 'Flipped';
+ transform-origin: left bottom;
+ transform: rotateX(90deg);
+}
+button .nose:hover {
+ transform-origin: center bottom;
+ transform: rotateX(-90deg) translateY(100%);
+}
 
 
 
-#salirCliente{
+
+
+
+
+
+/*#salirCliente{
     background: green;
     border-radius: 15px 15px 15px 15px;
 }
 
 #salirCliente:hover{
     background: black;
-}
+}*/
 
 #btn_login{
     background: green;
@@ -490,7 +514,7 @@ td .btn_eliminarPedido:hover{
 table {     
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 12px; 
-     margin-top: 8%;
+   margin-top: 8%;
     width: 480px; 
     text-align: center;  
     border-collapse: collapse;
