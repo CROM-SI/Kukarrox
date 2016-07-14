@@ -31,14 +31,13 @@
             <div class="col-md-4"></div>
             <div class="col-md-4">
 
-                <button class="nose" >    <a href="<?= base_url() ?>Controlador/generar" id="generarPedido"  >Generar Pedido</a>
-                </button>
-
+                   <a href="<?= base_url() ?>Controlador/generar" id="generarPedido" class="myButton" >Generar Pedido</a>
+                  
             </div>
             <div class="col-md-4">
 
 
-                <a href="<?= base_url() ?>Controlador/cargarPedido" class="btn" id="volLista">Volver</a>
+                <a href="<?= base_url() ?>Controlador/cargarPedido" class="myButton" id="volLista">Volver</a>
 
             </div>
 
