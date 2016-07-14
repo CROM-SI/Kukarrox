@@ -19,9 +19,10 @@
                
                 <td> <?=$i->cantidad?></td>
               
-                <td> <input type="text" hidden="true"  name=""  value="<?=$i->id_carrito?>"/></td>
+                
                 <td><button id="btneliminarC" name="id" value="<?=$i->id_carrito?>" class="btn btn-succes"  >Eliminar</button></td>
-                         
+                <td><button id="btneliminarC" name="id" value="<?=$i->id_carrito?>" class="btn btn-succes"  >editar</button></td>
+                <td> <input type="text" hidden="true"  name=""  value="<?=$i->id_carrito?>"/></td>
                 </tr>
        
             <?php }?>
@@ -29,11 +30,11 @@
         </tr>  
     </table>
     <br> <br>
-    <div>
+    <div >
         <center>
             
                <a href="<?=base_url()?>Controlador/generar" id="generarPedido"  class="btn btn-succes" 
-                  style="background-color: red; color: black; margin-left: 135%" 
+                  style="background-color: red; color: black; margin-right: 135% ; margin-bottom: 10%" 
                   >Generar Pedido</a>
  
         </center>
