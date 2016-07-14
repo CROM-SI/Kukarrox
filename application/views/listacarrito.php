@@ -17,36 +17,36 @@
                 <?php foreach ($carrito as $i) { ?>
                 <tr>
 
-                <td> <?=$i->nombre_producto?> </td>
-               
-                <td> <?=$i->precio_por_unidad?></td>
-               
-                <td> <?=$i->cantidad?></td>
-              
-                
-                <td><button id="btneliminarC" name="id" value="<?=$i->id_carrito?>" class="btn btn-succes"  >Eliminar</button></td>
-                
-                <td> <input type="text" hidden="true"  name=""  value="<?=$i->id_carrito?>"/></td>
+                    <td> <?= $i->nombre_producto ?> </td>
+
+                    <td> <?= $i->precio_por_unidad ?></td>
+
+                    <td> <?= $i->cantidad ?></td>
+
+
+                    <td><button id="btneliminarC" name="id" value="<?= $i->id_carrito ?>" class="btn btn-succes"  >Eliminar</button></td>
+
+                    <td> <input type="text" hidden="true"  name=""  value="<?= $i->id_carrito ?>"/></td>
                 </tr>
-       
-            <?php }?>
-                 
-        </tr>  
-    </table>
-    <br> <br>
-    <div >
-        <center>
-            
-               <a href="<?=base_url()?>Controlador/generar" id="generarPedido"  class="btn btn-succes" 
-                  style="background-color: red; color: black; margin-right: 135% ; margin-bottom: 10%" 
-                  >Generar Pedido</a>
- 
-        </center>
-        
-        <a href="<?=base_url()?>Controlador/cargarPedido" class="btn btn-success" id="volLista">Volver</a>
+
+            <?php } ?>
+
+            </tr>  
+        </table>
+        <br> <br>
+        <div class="row" >
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <a href="<?= base_url() ?>Controlador/generar" id="generarPedido"  class="myButtons" >Generar Pedido</a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="<?= base_url() ?>Controlador/cargarPedido" class="myButton" id="volLista">Volver</a>
+            </div>
         </div>
 
-      </form>
- 
+    </form>
+
 
 </div>

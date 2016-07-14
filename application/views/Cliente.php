@@ -6,7 +6,7 @@
 
 <h3 style="text-align: center">Bienvenido Cliente: <?= $usuario ?></h3>
 
-<div id="menuLateral" style="width: 500px">
+<div id="menuLateral" style="width: 500px;margin-left: -25%" >
 
 
     <ul>
