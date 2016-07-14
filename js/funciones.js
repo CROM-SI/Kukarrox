@@ -96,7 +96,7 @@ function cargarContent2() {
                 $("#btn_verPed").button();
                 $("#btn_camPass").button();
                 $("#salirCli").button();
-                cargarCarrito();
+                
             }
     );
 }
@@ -426,7 +426,8 @@ function cargarCarrito() {
     $.post(
             base_url + "Controlador/cargarCarrito",
             {
-                 nombreC :$("#nombreCc").val()
+                 nombreC :$("#nombreCc").val(),
+                 id : $("#categoria").val()
                  
             },
             function (pagina) {

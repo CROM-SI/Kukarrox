@@ -3,6 +3,14 @@
     <input type="id" id="nombreCc"  hidden="true" value="<?=$usuario?>"/>
     <br>
     <br>
+    Categoria:  <select  id="categoria" name="categoria" onclick="cargarCarrito()"  > 
+                   <option disabled selected value="0">Seleccione</option> 
+                 
+                   <?php foreach ($categoria as $i) : ?>
+                   <option value="<?= $i->id_categoria; ?>"><?= $i->nombre_categoria; ?></option>
+
+                <?php endforeach; ?>
+                   </select>
     
     <a href="#" onclick="cargarCarrito()"  id="btn_carrito" hidden="true" >Carrito</a>
     <br/><br/>

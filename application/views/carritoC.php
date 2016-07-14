@@ -8,17 +8,22 @@
          
     </center>
    
-    <div class="col-md-12">
-            
-         
+    <div>
+      
+            <form method="POST" class="pagination-sm" action="<?=base_url()?>Controlador/cargarCarrito">
+        
+            </form>
+        <br><br>
         
             <center>
                
                <?php foreach  ($producto as $i): ?> 
               
     
-                <form method="POST"  action="<?=base_url()?>Controlador/almacencarrito">                
-                    <div class="col-md-4"  style="border:2px solid chartreuse ; margin-bottom:5%; width: 50% ; border-radius: 5%;" >
+                <form method="POST" class="pagination-sm" action="<?=base_url()?>Controlador/almacencarrito">
+                    
+                   
+                    <div   style="border:2px solid chartreuse ; margin-bottom:5%; width: 50% ; border-radius: 5%;" >
                    
                     <p >Nombre Producto :<?= $i->nombre_producto  ?></p>
                     <input type="text" name="nombreC" hidden="true" value="<?= $i->nombre_producto ?>"/>
@@ -27,7 +32,7 @@
                 
                    <br><br>
                 
-                   Cantidad:  <select class="col-md-12" id="cantidad" name="cantidadC" > 
+                   Cantidad:  <select  id="cantidad" name="cantidadC" > 
                    <option disabled selected value="0">Seleccione</option> 
                  
                    <?php for($x=0; $x<=$i->stok_producto;$x++){?> 
@@ -44,16 +49,9 @@
             
             </center>
             
-            
+        
         </div>
        
-            
-       
- 
-       
-        
-
-    
-   <a id="salirCliente" style="margin-left:10%; color: white;" class="btn btn-succes" href="<?=base_url()?>Controlador/volver2">Salir</a>
+  
 </div>
 

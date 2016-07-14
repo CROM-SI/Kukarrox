@@ -34,9 +34,9 @@ class Controlador extends CI_Controller {
 
     function cargarContent2() {
         if ($this->session->userdata('login2') == true) {
-            $data['producto'] = $this->modelo->consultaproducto()->result();
+            
             $data['usuario'] = $this->session->userdata("usuario");
-
+            $data['categoria'] = $this->modelo->mostrarcategoria()->result();
             $data['activo'] = 0;
             $this->load->view("Cliente", $data);
         } else {
@@ -438,8 +438,10 @@ class Controlador extends CI_Controller {
     }
 
     function cargarCarrito() {
-
-        $data['producto'] = $this->modelo->consultaproducto()->result();
+    
+        $id = $this->input->post("id");
+        
+        $data['producto'] = $this->modelo->consultaproducto($id)->result();
 
         $data['usuario'] = $this->session->userdata("usuario");
 
@@ -449,6 +451,7 @@ class Controlador extends CI_Controller {
     }
 
     function cargarlistacarrito() {
+        
         $nombre = $this->input->post("nombreC");
         $data['carrito'] = $this->modelo->mostrarcarrito($nombre)->result();
 
@@ -515,7 +518,7 @@ class Controlador extends CI_Controller {
             $pre = $this->input->post("precioC");
             $x = $this->input->post("cantidadC");
             $nombre = $this->input->post("nombreCl");
-
+            
             if ($x > 0) {
                 $data = array(
                             'nombre_producto' => $nomb,

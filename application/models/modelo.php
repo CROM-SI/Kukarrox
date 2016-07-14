@@ -63,8 +63,9 @@ class Modelo extends CI_Model{
    
     
     //    consultar los productos 
-    function consultaproducto(){
-       $this->db->select('nombre_producto,precio_por_unidad,id_producto,stok_producto');
+    function consultaproducto($dato){
+       $this->db->select('nombre_producto,precio_por_unidad,id_producto,stok_producto,id_categoria');
+       $this->db->where('id_categoria', $dato);
        $this->db->from("producto");
          $data = $this->db->get();
         return $data;
@@ -110,6 +111,12 @@ class Modelo extends CI_Model{
         }else{
             return false;
         }
+    }
+    function mostrarcategoria(){
+       $this->db->select('nombre_categoria,id_categoria'); 
+        $res = $this->db->get('categoria');
+        
+            return $res;
     }
             
     function eliminarBodeguero($id){
