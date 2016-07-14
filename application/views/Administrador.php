@@ -1,26 +1,22 @@
-<div id="content" style="width: 30%;">
-    <h2 style="text-align: center">Bienvenido Adminstrador</h2>
+<h2 style="text-align: center">Bienvenido Adminstrador</h2>
+<div id="menuBotonesAdm" >
 
-    <br>
-    <br>
-    <a href="#" id="btn_sol" onclick="cargarSolicitud()">Solicitudes </a>
-    <br/><br/>
-     <a href="#" id="btn_verPedAdm" onclick="cargarPedidoAdm()">Ver pedidos</a>
-    <br/><br/>
-    <a href="#" id="btn_regBod" onclick="cargarRegistroBod()">Registrar Nuevo Encargado de bodega </a>
-    <br/><br/>
-    <a href="#" id="btn_verBod" onclick="cargarVerBod()">Ver encargados de bodega </a>
-    <br/><br/>
-    <a href="#" id="btn_regCli" onclick="cargarRegistroCli()" >Registrar nuevo Cliente</a>
-    <br><br>
-    <a href="#" id="btn_Prod" onclick="cargarIngresaPro()">Ingresar Productos </a>
-    <br/><br/> 
-    <a href="#" id="btn_VerPro" onclick="cargarVerPro()">Ver Productos </a>
-    <br/><br/> 
-    <a href="#" id="btn_carRegAdm" onclick="cargarRegAdm()">Registro de pedidos </a>
-    <br/><br/>
-    <br/><br/>
-    <a id="salirAdm"  href="<?=base_url()?>Controlador/salir">Salir</a>
+
+    <ul>
+        <li><a href="#"  id="btn_sol" onclick="cargarSolicitud()">Solicitudes Pendientes</a></li>
+        <li> <a href="#"  id="btn_verPedAdm" onclick="cargarPedidoAdm()">Pedidos Realizados</a></li>
+        <li>  <a href="#"  id="btn_VerPro" onclick="cargarVerPro()">Productos en Stock </a></li>
+        <br>
+        <li> <a href="#" id="btn_regBod" onclick="cargarRegistroBod()">Registrar Encargado de bodega </a></li>
+        <li>  <a href="#" id="btn_verBod" onclick="cargarVerBod()">Encargados de bodega </a></li>
+        <li>  <a href="#" id="btn_regCli" onclick="cargarRegistroCli()" >Registrar Cliente</a></li>
+        <li>  <a href="#" id="btn_Prod" onclick="cargarIngresaPro()">Ingresar Productos </a></li>
+
+        <li>  <a href="#" id="btn_carRegAdm" onclick="cargarRegAdm()">Registro de pedidos </a></li>
+        <a style="color:#666">.                     .</a>
+        <li>  <a id="salirAdm" style="font-size: 11px"  href="<?= base_url() ?>Controlador/salir">Cerrar Sesión</a></li>
+    </ul> 
+
 </div>
 
 <div id="menuAdm"></div>
