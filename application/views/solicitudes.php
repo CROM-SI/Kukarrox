@@ -1,7 +1,7 @@
 <div id="form2">
     
   
-    <table id="table" align="center" border="2" width="500">
+    <table id="table" align="center" border="2" >
         <caption>Solicitud de registro</caption>
         <tr>
             <th style="text-align: center"><h5>Nombre</h5></th>

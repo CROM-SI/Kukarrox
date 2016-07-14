@@ -14,7 +14,7 @@
 
         <li>  <a href="#" id="btn_carRegAdm" onclick="cargarRegAdm()">Registro de pedidos </a></li>
         <a style="color:#666">.                     .</a>
-        <li>  <a id="salirAdm" style="font-size: 11px"  href="<?= base_url() ?>Controlador/salir">Cerrar Sesión</a></li>
+        <li>  <a id="salirAdm" style="font-size: 10px; letter-spacing: 3px;"  href="<?= base_url() ?>Controlador/salir">Cerrar Sesión</a></li>
     </ul> 
 
 </div>

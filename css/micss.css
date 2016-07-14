@@ -37,7 +37,7 @@ body{
 #form{
     color:black;
     text-align: center;
-    margin-left: 50%;
+    margin-left: 30%;
     margin-top: 6%;
     width: 50%;
     border: 2px black solid;
@@ -488,7 +488,7 @@ table {
     width: 480px; 
     text-align: center;  
     border-collapse: collapse;
-    margin-left: 50%;
+   
     
 }
 
@@ -534,7 +534,8 @@ caption{
 
 #menuBotonesAdm ul {
     list-style-type: circle;
-    margin: 0px;
+    margin:0px;
+    margin-top: 5%;
     padding: 0px;
     width: 170px;
     font-family: Arial, sans-serif;
@@ -557,7 +558,6 @@ caption{
    margin-right: 5px;
 }
 
-
 #menuBotonesAdm li a, .dropbtn {
 
     display: inline-block;
@@ -574,3 +574,9 @@ caption{
     color: #fff;
    
 }
+
+/*#form2{
+    position: initial;
+    left:  30px;
+    top: 350px;
+}*/
