@@ -1,5 +1,5 @@
 
-<div id="content">
+<div id="content" style="margin-top: 5%;">
     
 
     <center>
@@ -7,8 +7,10 @@
 <!--        <h1><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h1>-->
          
     </center>
-   
-    <div class="col-md-12">
+    <div class="row">
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
             
          
         
@@ -47,13 +49,16 @@
             
         </div>
        
-            
+    <div class="col-md-2">
+        
+<!--        <a id="salirCliente" style="float:right; color: white;"  class="btn" href="<?=base_url()?>Controlador/volver2">Salir</a>  -->
+    </div>        
        
  
-       
+    </div>
         
 
     
-   <a id="salirCliente" style="margin-left:10%; color: white;" class="btn btn-succes" href="<?=base_url()?>Controlador/volver2">Salir</a>
+   
 </div>
 
