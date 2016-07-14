@@ -4,7 +4,7 @@
 
     <center>
         
-        <h1><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h1>
+<!--        <h1><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h1>-->
          
     </center>
    

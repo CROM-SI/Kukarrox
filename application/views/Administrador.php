@@ -1,5 +1,5 @@
 <h2 style="text-align: center">Bienvenido Adminstrador</h2>
-<div id="menuBotonesAdm" >
+<div id="menuLateral" >
 
 
     <ul>
