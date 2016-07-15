@@ -763,6 +763,22 @@ class Controlador extends CI_Controller {
         $this->load->view("editarCarrito", $data);
         $this->load->view("footer");
     }
+    
+    function cargarCategoria(){
+        $this->load->view("categoria");
+    }
+    
+    function registrarCatego(){
+        $nombre = $this->input->post("nombreCat");
+        
+        $data= array(
+            'nombre_categoria' => $nombre
+        );
+        
+        $this->modelo->regCategoria($data);
+        
+        $this->load->view("");
+    }
 
      
 }

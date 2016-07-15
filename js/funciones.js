@@ -559,4 +559,52 @@ function cargarRegAdm() {
     );
 }
 
+function cargarIngresaCatego(){
+    $.post(
+            base_url + "Controlador/cargarCategoria",
+            {
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_botCat").click(
+                        function () {
+                            regCategoria();
+                            $("#nombreCate").val('');
+                        }
+
+                );
+
+            }
+    );
+}
+
+function regCategoria(){
+    var nombre = $("#nombreCate").val();
+
+
+    var error = false;
+
+    if (!error && nombre.trim().length <= 0) {
+        $("#mensajeError").html("<p>Nombre no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (error) {
+        $("#mensajeError").dialog("open");
+
+    } else {
+        $.post(
+                base_url + "Controlador/registrarCatego",
+                {
+                    nombreCat: nombre
+
+                },
+                function () {
+                    $("#mensajeError").html("<p>Categoria ingresada Exitosamente</p>");
+                    $("#mensajeError").dialog("open");
+                });
+    }
+}
+
 

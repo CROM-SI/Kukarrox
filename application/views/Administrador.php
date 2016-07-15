@@ -11,6 +11,7 @@
         <li>  <a href="#" id="btn_verBod" onclick="cargarVerBod()">Encargados de bodega </a></li>
         <li>  <a href="#" id="btn_regCli" onclick="cargarRegistroCli()" >Registrar Cliente</a></li>
         <li>  <a href="#" id="btn_Prod" onclick="cargarIngresaPro()">Ingresar Productos </a></li>
+        <li>  <a href="#" id="btn_catego" onclick="cargarIngresaCatego()">Ingresar Categorias </a></li>
 
         <li>  <a href="#" id="btn_carRegAdm" onclick="cargarRegAdm()">Registro de pedidos </a></li>
         <a style="color:#666">.                     .</a>

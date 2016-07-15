@@ -274,7 +274,9 @@ class Modelo extends CI_Model{
         $this->db->update('carrito',$data);
     }
     
-    
+    function regCategoria($data){
+        $this->db->insert('categoria',$data);
+    }
     
 }
 ?>
