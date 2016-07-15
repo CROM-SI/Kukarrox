@@ -451,9 +451,9 @@ class Controlador extends CI_Controller {
     }
 
     function cargarlistacarrito() {
+        $nombreU = $this->session->userdata("usuario");
         
-        $nombre = $this->input->post("nombreC");
-        $data['carrito'] = $this->modelo->mostrarcarrito($nombre)->result();
+        $data['carrito'] = $this->modelo->pdf($nombreU);
 
         $this->load->view("listacarrito", $data);
     }
@@ -707,6 +707,61 @@ class Controlador extends CI_Controller {
     function cargarReg(){
         $data['arrRegistros'] = $this->modelo->mostrarReg();
         $this->load->view("registros",$data);
+    }
+    
+    function eliminarProCarrito() {
+        $id = $this->uri->segment(3);
+        $this->modelo->eliminarProCarrito($id);
+
+
+        $this->load->view("header");
+        $this->load->view("pedido");
+        $this->load->view("footer");
+    }
+    
+    function editarCarrito() {
+        $id = $this->uri->segment(3);
+        $data = array(
+            'nombre_producto' => $this->input->post("nombreProCar"),
+            'precio_por_unidad' => $this->input->post("precioProCar"),
+            'cantidad' => $this->input->post("cantidadCar"),
+            
+        );
+
+        $this->modelo->editarCarrito($id, $data);
+
+        $this->load->view("header");
+        $this->load->view("pedido");
+        $this->load->view("footer");
+    }
+    
+    function cargarEditarProCarrito() {
+
+        $id = $this->uri->segment(3);
+        $obtenerCarrito = $this->modelo->obtenerProCarri($id);
+
+        if ($obtenerCarrito != FALSE) {
+            foreach ($obtenerCarrito->result() as $row) {
+                $nombre = $row->nombre_producto;
+                $precio = $row->precio_por_unidad;
+                $cantidad = $row->cantidad;
+                
+            }
+
+            $data = array('id_carrito' => $id,
+                'nombre_producto' => $nombre,
+                'precio_por_unidad' => $precio,
+                'cantidad' => $cantidad
+                
+            );
+        } else {
+            $data = "";
+            return FALSE;
+        }
+
+        $this->load->view("header");
+        $this->load->view("editarCarrito", $data);
+        $this->load->view("footer");
     }
 
      

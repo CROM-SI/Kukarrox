@@ -71,16 +71,7 @@ class Modelo extends CI_Model{
         return $data;
     }
     
-//    mostrar carrito
-     function  mostrarcarrito($nombreU){
-       
-        $this->db->select('id_carrito,nombre_producto,precio_por_unidad,cantidad,nombre_us'); 
-         $this->db->where("nombre_us",$nombreU);
-        $res = $this->db->get('carrito');
-        
-            return $res;
-        
-    }
+
     
     function mostrarBodegueros(){
        $this->db->select("*");
@@ -260,6 +251,29 @@ class Modelo extends CI_Model{
             return false;
         }
     }
+    
+    function eliminarProCarrito($id){
+        
+        $this->db->where('id_carrito',$id);
+        $this->db->delete('carrito');
+      
+    }
+    
+    function obtenerProCarri($id){
+        $this->db->where('id_carrito',$id);
+        $res = $this->db->get('carrito');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
+    function editarCarrito($id, $data){
+        $this->db->where('id_carrito',$id);
+        $this->db->update('carrito',$data);
+    }
+    
     
     
 }
