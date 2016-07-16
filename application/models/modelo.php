@@ -278,5 +278,31 @@ class Modelo extends CI_Model{
         $this->db->insert('categoria',$data);
     }
     
+    function categoria(){
+         $consulta = "select * from categoria;";
+        
+        $res = $this->db->query($consulta);
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
+    function cargarCate($id){
+        $this->db->where('id_categoria',$id);
+        $res = $this->db->get('categoria');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
+    function editarCate($id, $data){
+        $this->db->where('id_categoria',$id);
+        $this->db->update('categoria',$data);
+    }
+    
 }
 ?>

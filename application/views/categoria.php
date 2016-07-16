@@ -23,7 +23,29 @@
    
     <br/>
     <button id="btn_botCat" style="margin-top: 5%; border: 1px black solid" class="btn btn-succes">Guardar</button>
-   
+    <br/>
+    <div>
+        <table id="table" align="center" border="2" width="400">
+        <caption>Categorias</caption>
+        <tr>
+            <th style="text-align:center"><h5>Categoria</h5></th>
+            
+            <th style="text-align:center"><h5>Accion</h5></th>
+        </tr>
+        <?php
+        foreach ($arrCate->result() as $row){
+            echo "<tr>";
+                echo "<td>".$row->nombre_categoria."</td>";
+                
+                echo "<td><a class='btn_editar' href=".base_url()."Controlador/cargarCate/".$row->id_categoria.">Editar</a>" ;
+                echo "</td>";
+            echo "</tr>";
+        }
+        
+        ?>
+    </table>
+    </div>
+    
 </div>
 
 

@@ -17,8 +17,9 @@
                  
                    <?php foreach ($categoria as $i) : ?>
                    <option  value="<?= $i->id_categoria; ?>"><?= $i->nombre_categoria; ?></option>
-
+                   
                 <?php endforeach; ?>
+                   
                    </select>
        </li>
      

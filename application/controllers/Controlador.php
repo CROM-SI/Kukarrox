@@ -444,6 +444,8 @@ class Controlador extends CI_Controller {
         $data['producto'] = $this->modelo->consultaproducto($id)->result();
 
         $data['usuario'] = $this->session->userdata("usuario");
+        
+        
 
 
 
@@ -765,10 +767,13 @@ class Controlador extends CI_Controller {
     }
     
     function cargarCategoria(){
-        $this->load->view("categoria");
+        $data['arrCate'] = $this->modelo->categoria();
+        $this->load->view("categoria",$data);
     }
     
     function registrarCatego(){
+        
+        
         $nombre = $this->input->post("nombreCat");
         
         $data= array(
@@ -777,8 +782,48 @@ class Controlador extends CI_Controller {
         
         $this->modelo->regCategoria($data);
         
-        $this->load->view("");
+        
+        
+        
     }
 
-     
+    function cargarCate(){
+        $id = $this->uri->segment(3);
+        $obtenerCate = $this->modelo->cargarCate($id);
+
+        if ($obtenerCate != FALSE) {
+            foreach ($obtenerCate->result() as $row) {
+                $nombre = $row->nombre_categoria;
+                
+                
+            }
+
+            $data = array('id_categoria' => $id,
+                'nombre_categoria' => $nombre
+                
+                
+            );
+        } else {
+            $data = "";
+            return FALSE;
+        }
+
+        $this->load->view("header");
+        $this->load->view("editarCate", $data);
+        $this->load->view("footer");
+    }
+    
+    function editarCate(){
+         $id = $this->uri->segment(3);
+        $data = array(
+            'nombre_categoria' => $this->input->post("nombreCate")
+            
+        );
+
+        $this->modelo->editarCate($id, $data);
+
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
 }

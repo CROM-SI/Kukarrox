@@ -429,15 +429,17 @@ function cargarCarrito() {
                  nombreC :$("#nombreCc").val(),
                  id : $("#categoria").val()
                  
+                 
             },
             function (pagina) {
                 $("#menuCliente").hide();
                 $("#menuCliente").html(pagina);
                 $("#menuCliente").show('fast');
-                $("#btn_carrito").click(
+                $("#carrito").click(
                         function () {
-
+                            
                         }
+                        
 
                 );
                 $("#salirCliente").button();
@@ -601,6 +603,7 @@ function regCategoria(){
 
                 },
                 function () {
+                    location.reload();
                     $("#mensajeError").html("<p>Categoria ingresada Exitosamente</p>");
                     $("#mensajeError").dialog("open");
                 });
