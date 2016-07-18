@@ -214,16 +214,16 @@ select {
 
 /*-------------Botones Admin------------------------------*/
 #btn_regBod{
-    background: #d3d5d1;
+    background: #91c470;
    border-radius: 0px 15px 15px 0px;
 }
 
 #btn_sol{
-    background: #80c9c6;
+    background: #91c470;
        border-radius: 0px 15px 15px 0px;
 }
 #btn_carRegAdm{
-    background: #a1cca5;
+    background: #91c470;
       border-radius: 0px 15px 15px 0px;
 }
 
@@ -235,24 +235,24 @@ select {
 
 
 #btn_regCli{
-    background: #e0ebc2;
+    background: #91c470;
        border-radius: 0px 15px 15px 0px;
 }
 
 
 #btn_verPedAdm{
-    background: #34b5aa;
+    background: #91c470;
       border-radius: 0px 15px 15px 0px;
 }
 
 
 #btn_verBod{
-    background: #e0ebc2;  
+    background: #91c470;  
     border-radius: 0px 15px 15px 0px;
 }
 
 #btn_VerPro{
-    background: #e8e8e7;
+    background: #91c470;
      border-radius: 0px 15px 15px 0px;
 }
 
@@ -260,6 +260,10 @@ select {
 #salirAdm{
     background: #ccdd91;
     border-radius: 0px 15px 15px 0px;
+}
+#btn_catego{
+    background: #91c470;
+    border-radius: 0px 12px 12px 0px; 
 }
 
 /*----Botones Bodega------------------------------------------------------------------*/
