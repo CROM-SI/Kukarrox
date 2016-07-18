@@ -269,11 +269,11 @@ select {
 /*----Botones Bodega------------------------------------------------------------------*/
 
 #btn_pedido{
-    background: #ccdd91;
+    background: #91c470;
       border-radius: 0px 15px 15px 0px;
 }
 #btn_carReg{
-     background: #ccdd91;
+     background: #91c470;
      border-radius: 0px 15px 15px 0px;
 }
 
@@ -502,20 +502,23 @@ select {
 
 
 td .btn_editar{
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 10px 10px 10px 10px;
     margin-left: 10%;
+    padding: 0 5px 0 5px;
 }
 td .btn_editar:hover{
     color:black;
-    background: #D0D0D0;
+    background: #D0A9F5;
     
 }
 
 td .btn_eliminar{  
-    background: red;
-    border-radius: 15px 15px 15px 15px;
+/*    background: red;*/
+  padding: 0 5px 0 5px;
+    border-radius: 10px 10px 10px 10px;
 }
 td .btn_eliminar:hover{
+ 
     background: red;
 }
 /*-------------------------*/
@@ -526,17 +529,7 @@ td .btn_editarPedido{
 td .btn_editarPedido:hover{
     color:black;
     background: #D0D0D0;
- 
-    
-}
-
-td .btn_eliminarPedido{  
-    background: #dff0d8;
-    border-radius: 15px 15px 15px 15px;
-}
-td .btn_eliminarPedido:hover{
-    background: red;
-    color: black;
+  
 }
 
 table {     
