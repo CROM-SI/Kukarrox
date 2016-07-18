@@ -6,7 +6,7 @@
     <br/>
     
     <br/>
-    <h10 class="campoenrojo">*</h10>Producto: <input value="<?=$nombre_categoria?>" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" type="text" name="nombreCate" class="input" required="true" />
+    <h10 class="campoenrojo">*</h10>Producto: <input value="<?=$nombre_categoria?>" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" type="text" name="nombreCate" class="input" required="true" maxlength="30" />
     
    
  

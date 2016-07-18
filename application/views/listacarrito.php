@@ -1,7 +1,7 @@
 <div id="content" style=" margin-top: 5%">
 
         <table id="table" align="center" border="2" width="400">
-        <caption>Encargados actuales de Bodega</caption>
+        <caption>Productos seleccionados</caption>
         <tr>
             <th style="text-align:center"><h5>Produco</h5></th>
             <th style="text-align:center"><h5>Precio</h5></th>
@@ -14,8 +14,8 @@
                 echo "<td>".$row->nombre_producto."</td>";
                 echo "<td>".$row->precio_por_unidad."</td>";
                 echo "<td>".$row->cantidad."</td>";
-                echo "<td><a class='btn_editar' href=".base_url()."Controlador/cargarEditarProCarrito/".$row->id_carrito.">Editar</a> | " ;
-                echo "<a class='btn_eliminar' href=".base_url()."Controlador/eliminarProCarrito/".$row->id_carrito.">Eliminar</a></td>";
+                echo "<td><a class='btn_editar' id='btn_ed' href=".base_url()."Controlador/cargarEditarProCarrito/".$row->id_carrito.">Editar</a> | " ;
+                echo "<a class='btn_eliminar' id='btn_el' href=".base_url()."Controlador/eliminarProCarrito/".$row->id_carrito.">x</a></td>";
             echo "</tr>";
         }
         

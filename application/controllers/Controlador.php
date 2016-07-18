@@ -616,9 +616,11 @@ class Controlador extends CI_Controller {
         $html .= "th{color: #fff; font-weight: bold; background-color: #222}";
         $html .= "h2{text-align: center;}";
         $html .= "td{background-color: #AAC7E3; color: #fff}";
+        $html .= "h5{text-align: right;}";
         $html .= "table{font-size: 12px; margin-top: 8%; width: 480px; text-align: center;  
                  border-collapse: collapse; margin-left: 50%;}";
         $html .= "</style>";
+        $html .= "<h5> fecha: ".date("d-m-Y")."</h5>";
         $html .= "<h2>Comprobante</h2>";
         $html .= "<h3>Detalle del pedido</h3>";
         $html .= "<table width='100%'>";

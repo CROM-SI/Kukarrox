@@ -9,7 +9,7 @@
     <br/>
     <h10 class="campoenrojo">*</h10>
     Nombre de la categoria: <input type="text" id="nombreCate"required="true"
-                                   maxlength="10" name="nombreCate"
+                                   maxlength="30" name="nombreCate"
                    style="
                                color:black;
                                margin-left: 9%;

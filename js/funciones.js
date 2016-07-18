@@ -96,6 +96,8 @@ function cargarContent2() {
                 $("#btn_verPed").button();
                 $("#btn_camPass").button();
                 $("#salirCli").button();
+                $(".btn_editar").button();
+                $(".btn_eliminar").button();
                 
             }
     );
@@ -469,7 +471,8 @@ function cargaralmacen() {
 
                 );
                 $("#salirCliente").button();
-                 
+                $(".btn_eliminar").button();
+                $(".btn_editar").button();
                
             }
     );
@@ -493,6 +496,8 @@ function cargarPedidos() {
                         }
 
                 );
+                $(".btn_eliminar").button();
+                
 
             }
     );
@@ -535,7 +540,8 @@ function cargarPedidoAdm() {
                         }
 
                 );
-
+                 $(".btn_eliminar").button();
+               
             }
     );
 }
@@ -577,6 +583,8 @@ function cargarIngresaCatego(){
                         }
 
                 );
+        
+                $(".btn_editar").button();
 
             }
     );
