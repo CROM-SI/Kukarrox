@@ -582,7 +582,7 @@ caption{
     margin:0px;
     margin-top: 5%;
     padding: 0px;
-    width: 170px;
+    width: 270px;
     font-family: Arial, sans-serif;
     font-size: 10px;
     float: left;
@@ -618,5 +618,22 @@ caption{
     border-left: 10px solid #333;
     color: #fff;
    
+}
+
+#categoria{
+    
+    background: white;
+    font-size: 14px;
+    height: 30px;
+
+    padding-left: 10%;
+    width: 50px;
+    border-radius: 30px 30px 30px 30px;
+
+}
+
+btn_buscar{
+    width:30px;
+    
 }
 

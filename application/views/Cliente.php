@@ -6,13 +6,13 @@
 
 <h3 style="text-align: center">Bienvenido Cliente: <?= $usuario ?></h3>
 
-<div id="menuLateral" style="width: 500px;margin-left: -25%" >
+<div id="menuLateral" style="width: 700px;margin-left: -25%" >
 
 
     <ul>
         <input type="id" id="nombreCc"  hidden="true" value="<?= $usuario ?>"/>
        
-        <li style="width: 50%; margin-top: 5%"> Categoria Producto:  <select  id="categoria" style="width: 201%" name="categoria" onclick="cargarCarrito()"  > 
+        <li style="width: 50%; margin-top: 5%"> Categoria Producto:  <select  id="categoria" style="width: 150%" name="categoria"  > 
                    <option disabled selected value="0">Seleccione</option> 
                  
                    <?php foreach ($categoria as $i) : ?>
@@ -20,7 +20,8 @@
                    
                 <?php endforeach; ?>
                    
-                   </select>
+            </select><a id="btn_buscar" onclick="cargarCarrito()"><span class='glyphicon glyphicon-search' class="btn btn-default btn-lg" ></span></a>
+            
        </li>
      
     

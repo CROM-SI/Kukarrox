@@ -98,7 +98,7 @@ function cargarContent2() {
                 $("#salirCli").button();
                 $(".btn_editar").button();
                 $(".btn_eliminar").button();
-                
+                $("#btn_buscar").button();
             }
     );
 }
