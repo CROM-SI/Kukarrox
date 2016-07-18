@@ -20,7 +20,7 @@
                    
                 <?php endforeach; ?>
                    
-            </select><a id="btn_buscar" onclick="cargarCarrito()"><span class='glyphicon glyphicon-search' class="btn btn-default btn-lg" ></span></a>
+            </select><a style="position: absolute; left: 280px; top: 435px" id="btn_buscar" onclick="cargarCarrito()"><span class='glyphicon glyphicon-search' class="btn btn-default btn-lg" ></span></a>
             
        </li>
      
