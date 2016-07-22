@@ -453,10 +453,20 @@ class Controlador extends CI_Controller {
     }
 
     function cargarlistacarrito() {
+        $fecha = date("d-m-Y");
         $nombreU = $this->session->userdata("usuario");
         
         $data['carrito'] = $this->modelo->pdf($nombreU);
-
+        $car = $this->modelo->pdf($nombreU);
+        
+        foreach ($car->result() as $row){
+            if ($fecha!=$row->fecha) {
+                
+            $id = $row->id_carrito;
+            $this->modelo->eliminarProCarrito($id);
+            }
+        }
+        
         $this->load->view("listacarrito", $data);
     }
 
@@ -488,7 +498,8 @@ class Controlador extends CI_Controller {
            'precio_por_unidad' => $pre,
            'cantidad' => $x,
            'nombre_us'=>$nombre,
-             'estado'=>'pendiente'
+             'estado'=>'pendiente',
+             'fecha'=> date("d-m-Y")
               
            );
           
@@ -527,7 +538,8 @@ class Controlador extends CI_Controller {
                             'precio_por_unidad' => $pre,
                             'cantidad' => $x,
                             'nombre_us' => $nombre,
-                            'estado' => 'pendiente'
+                            'estado' => 'pendiente',
+                            'fecha'=> date("d-m-Y")
                 );
 
                 $this->modelo->regcarrito($data);
@@ -669,6 +681,7 @@ class Controlador extends CI_Controller {
                      $nombre = $val->nombre_producto;
                      $precio = $val->precio_por_unidad;
                      $categoria = $val->id_categoria;
+                     $fecha = $row->fecha;
                  }
              }
              
@@ -693,7 +706,8 @@ class Controlador extends CI_Controller {
             'cantidad' => $stockC,
             'precio_por_unidad' => $precio,
             'nombre_producto' => $nombre,
-            'estado' => 'realizado'
+            'estado' => 'realizado',
+            'fecha' => $fecha
         );
 
         $this->modelo->editarProducto($idPro,$data);
@@ -726,8 +740,7 @@ class Controlador extends CI_Controller {
     function editarCarrito() {
         $id = $this->uri->segment(3);
         $data = array(
-            'nombre_producto' => $this->input->post("nombreProCar"),
-            'precio_por_unidad' => $this->input->post("precioProCar"),
+            
             'cantidad' => $this->input->post("cantidadCar"),
             
         );
@@ -746,15 +759,13 @@ class Controlador extends CI_Controller {
 
         if ($obtenerCarrito != FALSE) {
             foreach ($obtenerCarrito->result() as $row) {
-                $nombre = $row->nombre_producto;
-                $precio = $row->precio_por_unidad;
+                
                 $cantidad = $row->cantidad;
                 
             }
 
             $data = array('id_carrito' => $id,
-                'nombre_producto' => $nombre,
-                'precio_por_unidad' => $precio,
+                
                 'cantidad' => $cantidad
                 
             );

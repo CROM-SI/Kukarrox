@@ -5,10 +5,7 @@
     <h5>Los campos marcados en <h10 class="campoenrojo">*</h10> son obligatorios</h5>
     <br/>
     
-    <br/>
-    <h10 class="campoenrojo">*</h10>Producto: <input value="<?=$nombre_producto?>" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" type="text" name="nombreProCar" class="input" required="true" />
-    <br/>
-    <h10 class="campoenrojo">*</h10>Precio: <input type="text" style="color:black;margin-left: 15%; margin-bottom:1%; width: 39%;border-radius: 6px" name="precioProCar" value="<?=$precio_por_unidad?>" class="input" required="true" />
+    
     <br/>
     <h10 class="campoenrojo">*</h10>Cantidad: <input type="text" style="color:black;margin-left: 15%; margin-bottom:2%; width: 35%;border-radius: 6px" name="cantidadCar" value="<?=$cantidad?>" class="input" required="true" />
    

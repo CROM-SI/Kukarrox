@@ -466,7 +466,7 @@ function cargaralmacen() {
 //                $("#paginaLogin2").show('fast');
                  $("#btn_verPed").click(
                         function () {
-
+                  location.reload();
                         }
 
                 );
