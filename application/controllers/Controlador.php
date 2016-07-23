@@ -482,7 +482,7 @@ class Controlador extends CI_Controller {
     }
 
     function almacencarrito() {
-
+     date_default_timezone_set('America/Argentina/Buenos_Aires');
      $datos = $this->modelo->consultaproducto()->result();
 
      if ($this->session->userdata('login2') == true) {
@@ -621,6 +621,7 @@ class Controlador extends CI_Controller {
 
         $nombreU = $this->session->userdata("usuario");
         $carrito = $this->modelo->pdf($nombreU);
+        date_default_timezone_set('America/Argentina/Buenos_Aires');
 
         //preparamos y maquetamos el contenido a crear
         $html = '';
@@ -632,7 +633,7 @@ class Controlador extends CI_Controller {
         $html .= "table{font-size: 12px; margin-top: 8%; width: 480px; text-align: center;  
                  border-collapse: collapse; margin-left: 50%;}";
         $html .= "</style>";
-        $html .= "<h5> fecha: ".date("d-m-Y")."</h5>";
+        $html .= "<h5> fecha: ".date("d-m-Y H:i:s")."</h5>";
         $html .= "<h2>Comprobante</h2>";
         $html .= "<h3>Detalle del pedido</h3>";
         $html .= "<table width='100%'>";
@@ -667,6 +668,31 @@ class Controlador extends CI_Controller {
 // Este método tiene varias opciones, consulte la documentación para más información.
         $nombre_archivo = utf8_decode("Comprobante.pdf");
         $pdf->Output($nombre_archivo, 'I');
+        
+                //cargamos la libreria email de ci
+ $this->load->library("email");
+ 
+ //configuracion para gmail
+ $configGmail = array(
+ 'protocol' => 'smtp',
+ 'smtp_host' => 'ssl://smtp.gmail.com',
+ 'smtp_port' => 465,
+ 'smtp_user' => 'kukarroxprueba@gmail.com',
+ 'smtp_pass' => 'kukarrox123',
+ 'mailtype' => 'html',
+ 'charset' => 'utf-8',
+ 'newline' => "\r\n"
+ );    
+ 
+ //cargamos la configuración para enviar con gmail
+ $this->email->initialize($configGmail);
+ 
+ $this->email->from('oscar');
+ $this->email->to('matias.gon.rojas@gmail.com, kataayoscarr@gmail.com');
+ $this->email->subject('Confirmacion de pedido');
+ $this->email->message('<h2>Pedido Generado por '.$nombreU.'</h2><h4>fecha: '.date("d-m-Y H:i:s").'</h4><h4>total del pedido = '.$resultado.'</h4><hr><br> Puede realizar despacho');
+ 
+ $this->email->send();
     }
 
     function eliminarPedido() {

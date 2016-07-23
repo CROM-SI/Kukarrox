@@ -3,6 +3,7 @@
     <table id="table" align="center" border="2" width="300">
         <caption>Pedidos</caption>
         <tr>
+            <th style="text-align:center"><h5>Cliente</h5></th>
             <th style="text-align:center"><h5>Nombre producto</h5></th>
             <th style="text-align:center"><h5>Precio</h5></th>
             <th style="text-align:center"><h5>Cantidad</h5></th>
@@ -13,6 +14,7 @@
         <?php
         foreach ($arrPedidos->result() as $row){
             echo "<tr>";
+                echo "<td>".$row->nombre_us."</td>";
                 echo "<td>".$row->nombre_producto."</td>";
                 echo "<td>".$row->precio_por_unidad."</td>";
                 echo "<td>".$row->cantidad."</td>";
