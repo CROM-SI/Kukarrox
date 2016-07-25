@@ -654,6 +654,15 @@ class Controlador extends CI_Controller {
                 $nomPro = $row->nombre_producto;
                 
             }
+            $dato = array(
+                
+                'nombre_producto' =>"Nombre Producto :". $row->nombre_producto,
+                'cantidad' => "cantidad :".$row->cantidad,
+                'precio_por_unidad'=> "precio por unidad :".$row->precio_por_unidad 
+                
+            );
+            
+            $data = implode(",", $dato);
             $resultado = $resultado + $total;
             $html .= "</tr>";
         }
@@ -688,11 +697,11 @@ class Controlador extends CI_Controller {
  $this->email->initialize($configGmail);
  
  $this->email->from('oscar');
- $this->email->to('matias.gon.rojas@gmail.com, kataayoscarr@gmail.com');
+ $this->email->to('matias.gon.rojas@gmail.com, kataayoscarr@gmail.com , carloseduardocornejo18@gmail.com');
  $this->email->subject('Confirmacion de pedido');
- $this->email->message('<h2>Pedido Generado por '.$nombreU.'</h2><h4>fecha: '.date("d-m-Y H:i:s").'</h4><h4>total del pedido = '.$resultado.'</h4><hr><br> Puede realizar despacho');
+ $this->email->message('<h2>Pedido Generado por '.$nombreU.'</h2><h4>fecha: '.date("d-m-Y H:i:s").'</h4><h4>'.$data.'</h4><h4>total del pedido = '.$resultado.'</h4><hr><br> Puede realizar despacho');
  
- $this->email->send();
+ $this->email->send(); 
     }
 
     function eliminarPedido() {
