@@ -34,7 +34,7 @@
                  id="stockPro"  required="true" maxlength="4" />
     <br/>
     <h10 class="campoenrojo">*</h10>Categoria:
-    <select id="categoria" style="margin-left: 10%" >
+    <select id="categoria" style="margin-left: 60px" >
         <option value="0">Seleccione</option>
         <?php
         foreach ($arrCategorias as $valor) {
